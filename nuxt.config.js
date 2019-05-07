@@ -1,7 +1,7 @@
 const pkg = require('./package')
 
 // TODO - prune down for production, this is only for initial design.
-const fontsUrl = 'https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,600,600i,700,700i|Oswald:200,300,400,500,600,700';
+const fontsUrl = 'https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,600,600i,700,700i|Oswald:200,300,400,500,600,700|Fira+Sans:300,400,500';
 
 module.exports = {
   mode: 'universal',
@@ -31,7 +31,8 @@ module.exports = {
   ** Global CSS
   */
   css: [
-    '~/assets/css/tailwind.css'
+    '~/assets/css/tailwind.css',
+    '~/assets/css/main.css',
   ],
 
   /*

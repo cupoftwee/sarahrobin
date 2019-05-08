@@ -29,3 +29,7 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+# lol apple calm down
+.DS_Store
+app/.DS_Store

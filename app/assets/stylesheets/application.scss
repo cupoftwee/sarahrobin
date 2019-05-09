@@ -14,7 +14,7 @@
  *= require_self
  */
 
- *,
+*,
 *:before,
 *:after {
   box-sizing: border-box;
@@ -34,6 +34,9 @@ html, body {
   box-sizing: border-box;
 }
 
+h1, h2, h3, h4 {
+  margin-bottom: 1vw;
+}
 h1, h2 {
   font-family: 'Crimson Text', serif;
 }
@@ -44,12 +47,12 @@ h3, h4 {
 
 p {
   margin: 0 auto;
-  margin-bottom: 1.5vh;
-  font-weight:400;
+  margin-bottom: 3vh;
+  font-weight: 400;
 }
-p + p {
-  text-indent: 0.7em;
-}
+// p + p {
+//   text-indent: 0.7em;
+// }
 
 blockquote p {
   /* Only Safari gets the fun type nerd stuff :( */
@@ -65,9 +68,17 @@ blockquote p {
 }
 
 section {
-  min-height: 75vh;
-  padding: 10vh 10vw;
+  min-height: 85vh;
+  // // Horizontal padding in sections is determined by current page width 
+  // // minus rough estimate at reasonable measure for body text font-size, 
+  // // divided by two since its padding on either side. ch is a problematic
+  // // unit, but it sure is handy and lightweight.
+  // padding: 10vh calc((100vw - 55ch) / 2);
   background: #eee;
+
+  p span {
+    font-weight: 600;
+  }
 }
 
 
@@ -138,5 +149,30 @@ section {
 .splash__social-links .social-links__link {
   display: block;
   padding: 0 1em;
+}
+
+.home__about {
+  display: flex;
+  
+  .about__details {
+    margin-right: 5vw;
+
+    .details__pic {
+      border-radius: 100px;
+      margin-top: 12px;
+    }
+  }
+
+  .about__bio {
+
+  }
+}
+
+.home__links {
+  min-height: 15vh;
+  background: none;
+  color: whitesmoke;
+  display: flex;
+  justify-content: space-between;
 }
 

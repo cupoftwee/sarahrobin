@@ -29,24 +29,33 @@
     </ul>
   </section>
 
-  <section>
-    <h2>Stuff &amp; Things</h2>
-    <p>
-      Hi! I'm a designer and engineer who enjoys building platforms and technologies that make people’s lives better. Also, pretty web things!
-    </p>
+  <section class="home__about">
+    <div class="column about__details">
+      <img class="details__pic" src="http://placehold.it/200x200">
+    </div>
 
-    <p>
-      For development, I commonly work w/ a varied Javascript stack for rapid prototyping and full-stack MVP projects (though a mature, well-maintained JS or TypeScript codebase can be a beautiful thing). I also tinker in Python, love writing Ruby, and I'm learning Rust.
-    </p>
+    <div class="column about__bio">
+      <p>
+        <span>Hi! I'm a designer and engineer</span> who builds web and mobile applications.
+        My passion is for finding and implementing reliable solutions for everyday 
+        problems that people face.
+      </p>
 
-    <p>
-      For design, I prefer an empathetic and people-centered approach to product development and user experience, that works towards responsible growth. I want to make a positive impact in people's lives, and that usually involves more listening to feedback than dictating solutions. Design just isn't how it works, its who it works for, as well.
-    </p>
+      <p>
+        For <strong>development</strong>, I commonly work w/ a varied Javascript stack for rapid 
+        prototyping and full-stack MVP projects, though I enjoy Ruby for side
+        projects and dabbling in Python.
+      </p>
 
-    <p>
-      For pretty web things, I use whatever I can get my hands on (canvas, SVG, OpenGL, etc). My current process is to create some kind of simulated life that scurries around, spilling pixels all over a canvas in a beautiful way (my profile's cover image was made this way). My eventual goal is to create simulated life that can judge the spilled pixels better than I can
-    </p>
+      <p>
+        For <strong>design</strong>, I prefer an empathetic and people-centered approach to 
+        product development and user experience, that works towards responsible 
+        growth.
+      </p>
+    </div>
+  </section>
 
+  <section class="home__links">
     <%= link_to 'List Articles', controller: 'articles' %>
     <%= link_to 'New article', new_article_path %>
   </section>

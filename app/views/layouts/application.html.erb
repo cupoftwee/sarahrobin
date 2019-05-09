@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Sarahrobin</title>
+    <% content_for :page_title, 'Sarah Robin | Portfolio & Professional Services' %>
+    <title><%= yield(:page_title) %></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,600,600i,700,700i|Oswald:200,300,400,500,600,700|Fira+Sans:300,400,500" rel="stylesheet">
   </head>
 
   <body>

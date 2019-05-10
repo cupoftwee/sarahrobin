@@ -14,9 +14,18 @@ config :sarahrobin,
 config :sarahrobin, SarahrobinWeb.Endpoint,
   url: [host: "localhost"],
   # secret_key_base: "vOWBDjSdXpFfmXDiMFOiv0uO6lmIfFEXLpCawWhkds1ahc6jXW3So3cDiLXimXKC",
-  secret_key_base: "6/sxMKB//wU5R7QSknNWbLrby8oyTkfKe+OtVivskdkFuda+Af2Kmv7bhXAfrflY",
+  # secret_key_base: "6/sxMKB//wU5R7QSknNWbLrby8oyTkfKe+OtVivskdkFuda+Af2Kmv7bhXAfrflY",
+  secret_key_base: System.get_env("SECRET_KEY_BASE"),
   render_errors: [view: SarahrobinWeb.ErrorView, accepts: ~w(html json)],
   pubsub: [name: Sarahrobin.PubSub, adapter: Phoenix.PubSub.PG2]
+
+# Configure your database
+config :sarahrobin, Sarahrobin.Repo,
+  adapter: Ecto.Adapters.Postgres,
+  url: System.get_env("DATABASE_URL"),
+  # The amount of database connections in the pool
+  # keep < 20
+  size: System.get_env("POOL_SIZE") 
 
 # Configures Elixir's Logger
 config :logger, :console,

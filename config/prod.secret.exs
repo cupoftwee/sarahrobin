@@ -9,7 +9,7 @@ use Mix.Config
 # kept out of version control and might be hard to recover
 # or recreate for your teammates (or yourself later on).
 config :sarahrobin, SarahrobinWeb.Endpoint,
-  secret_key_base: "6/sxMKB//wU5R7QSknNWbLrby8oyTkfKe+OtVivskdkFuda+Af2Kmv7bhXAfrflY"
+  secret_key_base: System.get_env("SECRET_KEY_BASE"),
 
 # Configure your database
 config :sarahrobin, Sarahrobin.Repo,

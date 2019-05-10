@@ -55,7 +55,10 @@ defmodule Sarahrobin.MixProject do
       {:earmark, "~> 1.2.6" },
       {:timex, "~> 3.3.0"},
       {:arc, "~> 0.11.0"},
-      {:arc_ecto, "~> 0.11.1"}
+      {:arc_ecto, "~> 0.11.1"},
+
+      # deploy
+      {:distillery, "~> 2.0"}
     ]
   end
 

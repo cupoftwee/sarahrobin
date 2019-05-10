@@ -1,6 +1,17 @@
 defmodule Sarahrobin.Auth.User do
-  # imports
-  # schema "users"
+  use Ecto.Schema
+  import Bcrypt
+  import Ecto.Changeset
+
+  schema "users" do
+    field :is_admin, :boolean, default: false
+    field :email, :string, unique: true
+    field :name, :string
+    field :password_hash, :string
+
+    field(:password, :string, virtual: true)
+    timestamps()
+  end
 
   @create_fields ~w(name password email)a
   @optional_fields ~w(is_admin)a
@@ -18,7 +29,7 @@ defmodule Sarahrobin.Auth.User do
   defp put_password_hash(changeset) do
     case changeset do
       %Ecto.Changeset{valid?: true, changes: %{password: pass}} ->
-        put_change(changeset, :password_hash, Comeonin.Bcrypt.hashpwsalt(pass))
+        put_change(changeset, :password_hash, Bcrypt.hash_pwd_salt(pass))
       _ ->
         changeset
     end

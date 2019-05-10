@@ -9,3 +9,15 @@
 #
 # We recommend using the bang functions (`insert!`, `update!`
 # and so on) as they will fail if something goes wrong.
+
+alias Sarahrobin.Repo
+
+alias Sarahrobin.Auth.User
+
+
+Repo.insert!(User.create_changeset(%User{}, %{
+  name: "Sarah",
+  email: "lol@cats.lol",
+  password: "lolcatslol",
+  is_admin: true
+}))

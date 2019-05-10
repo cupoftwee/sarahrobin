@@ -1,9 +1,27 @@
 defmodule Sarahrobin.Content.Post do
-  # imports
+  import Ecto.Changeset
+  require Slugger
+
+  use Ecto.Schema
+  use Arc.Ecto.Schema
+
+  alias Sarahrobin.Auth.User
+  alias SarahrobinWeb.Uploaders.Cover
 
   @derive {Phoenix.Param, key: :slug}
 
-  # schema "posts"
+
+  schema "posts" do
+    field :body, :string
+    field :published, :boolean, default: false
+    field :slug, :string, unique: true
+    field :title, :string
+    field :cover, Cover.Type
+
+    belongs_to :user, User
+
+    timestamps()
+  end
 
   def create_changeset(post, attrs) do
     post
@@ -16,12 +34,11 @@ defmodule Sarahrobin.Content.Post do
     |> cast(attrs, [:title, :body, :published, :user_id])
     |> cast_attachments(attrs, [:cover])
     |> validate_required([:title, :body])
-    |> validate_length(:title, min: 3)     
+    |> validate_length(:title, min: 3)
     |> process_slug
   end
 
   # Private
-
   defp process_slug(%Ecto.Changeset{valid?: validity, changes: %{title: title}} = changeset) do
     case validity do
       true -> put_change(changeset, :slug, Slugger.slugify_downcase(title))

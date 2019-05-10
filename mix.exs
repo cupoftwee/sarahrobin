@@ -33,17 +33,29 @@ defmodule Sarahrobin.MixProject do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
-      {:phoenix, "~> 1.4.0-rc"},
+      {:phoenix, "~> 1.4.0"},
       {:phoenix_pubsub, "~> 1.1"},
-      {:phoenix_ecto, "~> 3.5"},
-      {:ecto, "~> 3.0-rc", override: true},
-      {:ecto_sql, "~> 3.0-rc", override: true},
-      {:postgrex, ">= 0.0.0-rc"},
+      {:ecto_sql, "~> 3.0"},
+      {:phoenix_ecto, "~> 4.0"},
+      {:postgrex, ">= 0.14.3"},
       {:phoenix_html, "~> 2.11"},
-      {:phoenix_live_reload, "~> 1.2-rc", only: :dev},
+      {:phoenix_live_reload, "~> 1.2", only: :dev},
       {:gettext, "~> 0.11"},
       {:jason, "~> 1.0"},
-      {:plug_cowboy, "~> 2.0"}
+      {:plug_cowboy, "~> 2.0"},
+
+      # auth stuffs
+      {:guardian, "~> 1.2.1"},
+      {:comeonin, "~> 5.1"},
+      {:bcrypt_elixir, "~> 2.0"},
+
+
+      # bloggy stuffs
+      {:slugger, "~> 0.3"},
+      {:earmark, "~> 1.2.6" },
+      {:timex, "~> 3.3.0"},
+      {:arc, "~> 0.11.0"},
+      {:arc_ecto, "~> 0.11.1"}
     ]
   end
 

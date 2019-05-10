@@ -19,14 +19,6 @@ config :sarahrobin, SarahrobinWeb.Endpoint,
   render_errors: [view: SarahrobinWeb.ErrorView, accepts: ~w(html json)],
   pubsub: [name: Sarahrobin.PubSub, adapter: Phoenix.PubSub.PG2]
 
-# Configure your database
-config :sarahrobin, Sarahrobin.Repo,
-  adapter: Ecto.Adapters.Postgres,
-  url: System.get_env("DATABASE_URL"),
-  # The amount of database connections in the pool
-  # keep < 20
-  size: System.get_env("POOL_SIZE") 
-
 # Configures Elixir's Logger
 config :logger, :console,
   format: "$time $metadata[$level] $message\n",

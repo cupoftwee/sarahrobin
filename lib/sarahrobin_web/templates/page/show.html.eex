@@ -2,7 +2,7 @@
   <div class="col-md-6 offset-md-3">
 
     <img class="img img-fluid" 
-      src="<%= SarahrobinWeb.Uploaders.Cover.url({@post.cover, @post}) %>" 
+      src="<%= SarahrobinWeb.Uploaders.Cover.url({'', @post}) %>" 
       alt="cover image"
       style="width: 100%">
     <br><br><br>

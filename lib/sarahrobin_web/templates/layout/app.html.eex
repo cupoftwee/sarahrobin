@@ -8,29 +8,71 @@
     <meta name="author" content="Sarah Robin">
 
     <title>Sarah Robin | Design & Engineering</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <%# <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> %>
     <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>">
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700" rel="stylesheet">
+    <%# <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700" rel="stylesheet"> %>
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,600,600i,700,700i|Oswald:200,300,400,500,600,700|Fira+Sans:300,400,500" rel="stylesheet">
+</head>
   </head>
 
   <body>
-    <%= render "navbar.html", conn: @conn %>
-    <div class="container-fluid">
-    
-      <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
-      <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
+        
+    <div class="page__home">
+      <section class="home__splash">
+        <div class="splash__title">
+          <h1 class="title__logotype display-sans">
+            sarah robin
+          </h1>
 
-      <main role="main">
-        <%= if Map.has_key?(@conn.assigns, :sidebar) do %>
-          <%= render "sidebar.html", conn: @conn %>
-          <div class="main">
-            <%= render @view_module, @view_template, assigns %>
-          </div>
-        <% else %>
-        <%= render @view_module, @view_template, assigns %>
-        <% end %>
-      </main>
+          <h2 class="title__subtitle">
+            Design &amp; Engineering
+          </h2>
+        </div>
 
+        <ul class="splash__social-links">
+          <li class="social-links__link">
+            <a target="_blank">Github</a>
+          </li>
+
+          <li class="social-links__link">
+            <a target="_blank">Dribbble</a>
+          </li>
+
+          <li class="social-links__link">
+            <a target="_blank">LinkedIn</a>
+          </li>
+
+          <li class="social-links__link">
+            <a target="_blank">Twitter</a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="home__about">
+        <div class="column about__details">
+          <img class="details__pic" src="http://placehold.it/200x200">
+        </div>
+
+        <div class="column about__bio">
+          <p>
+            <span>Hi! I'm a designer and engineer</span> who builds web and mobile applications.
+            My passion is for finding and implementing reliable solutions for everyday 
+            problems that people face.
+          </p>
+
+          <p>
+            For <strong>development</strong>, I commonly work w/ a varied Javascript stack for rapid 
+            prototyping and full-stack MVP projects, though I enjoy Ruby for side
+            projects and dabbling in Python.
+          </p>
+
+          <p>
+            For <strong>design</strong>, I prefer an empathetic and people-centered approach to 
+            product development and user experience, that works towards responsible 
+            growth.
+          </p>
+        </div>
+      </section>
     </div>
     <script src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
   </body>

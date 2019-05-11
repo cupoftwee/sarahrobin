@@ -2,6 +2,8 @@ defmodule SarahrobinWeb.Uploaders.Cover do
   use Arc.Definition
   use Arc.Ecto.Definition
 
+  def __storage, do: Arc.Storage.Local
+
   @versions [:original, :thumb]
   
   def acl(:thumb, _), do: :public_read

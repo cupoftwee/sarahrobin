@@ -1,5 +1,5 @@
 https://github.com/gigalixir/gigalixir-buildpack-clean-cache.git
-https://github.com/DuckyTeam/heroku-buildpack-imagemagick
+https://github.com/celtra/heroku-buildpack-imagemagick-7.0.8
 https://github.com/HashNuke/heroku-buildpack-elixir
 https://github.com/gjaldon/heroku-buildpack-phoenix-static
 https://github.com/gigalixir/gigalixir-buildpack-mix.git

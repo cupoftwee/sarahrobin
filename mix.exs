@@ -58,7 +58,7 @@ defmodule Sarahrobin.MixProject do
       {:arc_ecto, "~> 0.11.1"},
 
       # deploy
-      {:distillery, "~> 2.0"}
+      # {:distillery, "~> 2.0"}
     ]
   end
 

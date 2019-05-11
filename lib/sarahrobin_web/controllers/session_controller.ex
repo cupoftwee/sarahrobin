@@ -4,8 +4,15 @@ defmodule SarahrobinWeb.SessionController do
 
   alias Sarahrobin.Auth.Accounts
 
+
+  # not yet implemented
+  # def index(conn, _) do
+  #   render("new.html")
+  # end
+
   def new(conn, _) do
-    render(conn, "new.html")
+    conn 
+      |> render("new.html")
   end
 
   def create(conn, %{"session" => %{"email" => email, "password" => password}}) do

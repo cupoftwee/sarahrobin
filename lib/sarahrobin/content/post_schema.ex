@@ -14,6 +14,7 @@ defmodule Sarahrobin.Content.Post do
   schema "posts" do
     field :body, :string
     field :published, :boolean, default: false
+    field :tag, :string
     field :slug, :string, unique: true
     field :title, :string
     field :cover, Cover.Type
@@ -31,7 +32,7 @@ defmodule Sarahrobin.Content.Post do
 
   def common_changeset(changeset, attrs) do
     changeset
-    |> cast(attrs, [:title, :body, :published, :user_id])
+    |> cast(attrs, [:title, :body, :published, :tag, :user_id])
     |> cast_attachments(attrs, [:cover])
     |> validate_required([:title, :body])
     |> validate_length(:title, min: 3)

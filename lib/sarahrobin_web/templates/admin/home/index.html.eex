@@ -3,6 +3,7 @@
   <div class="col-md-4">
     <div class="card">
       <div class="card-header"><strong>Blog Posts</strong></div>
+      
       <div class="card-body">
         <div class="progress">
           <div class="progress-bar bg-success" 
@@ -14,6 +15,7 @@
             Draft
           </div>
         </div>
+
         <table class="table table-bordered">
           <tbody>
             <tr>

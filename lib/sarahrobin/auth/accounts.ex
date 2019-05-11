@@ -31,6 +31,7 @@ defmodule Sarahrobin.Auth.Accounts do
     IO.inspect(given_password)
     IO.puts('Query one results: ')
     IO.inspect(Repo.one(query))
+
     Repo.one(query)
     |> check_password(given_password)
   end
@@ -53,6 +54,7 @@ defmodule Sarahrobin.Auth.Accounts do
     IO.puts('user: ')
     IO.inspect(user)
     IO.inspect(user.password_hash)
+    
     case Bcrypt.verify_pass(given_password, user.password_hash) do
       true -> {:ok, user}
       false -> {:error, user}

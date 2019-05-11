@@ -4,6 +4,7 @@
   <thead>
     <th>Post Title</th>
     <th>Author</th>
+    <th>Tag</th>
     <th>Created</th>
     <th>Published</th>
     <th>Actions</th>
@@ -13,6 +14,7 @@
     <tr>
       <td><%= post.title %></td>
       <td><%= post.user.name %></td>
+      <td><%= post.tag %></td>
       <td><%= format_date(post) %></td>
       <td><%= published_status(post) %></td>
       <td>

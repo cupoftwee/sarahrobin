@@ -27,8 +27,11 @@ defmodule SarahrobinWeb.Router do
 
   scope "/", SarahrobinWeb do
     pipe_through :browser
-    resources("/", PageController, only: [:index, :show])
+    get "/", PageController, :home
+    get "/work", PageController, :work
+    resources("/blog", PageController, only: [:index, :show])
     resources("/session", SessionController, only: [:create, :new, :delete])
+    
   end
 
 end

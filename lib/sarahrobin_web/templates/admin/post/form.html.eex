@@ -15,10 +15,18 @@
   </div>
 
   <div class="form-group">
+    <%= text_input f, :tag, placeholder: "Tag", class: "form-control" %>
+    <span class="text-danger"><%= error_tag f, :tag %></span>
+  </div>
+
+  <br /><br /><hr /><br /><br />
+
+  <div class="form-group">
     <label>
       Upload Cover Image : &nbsp; <%= file_input f, :cover %>
       <span class="text-danger"><%= error_tag f, :cover %></span>
     </label>
+    
     <%= submit "Submit", class: "btn btn-primary float-right" %>
   </div>
 

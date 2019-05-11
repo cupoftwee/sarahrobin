@@ -12,6 +12,8 @@
       <br>
       <p><%= @post.user.name %></p>
       <br><br>
+      <p><%= @post.tag %></p>
+      <br><br>
     </div>
 
     <%= raw Earmark.as_html!(@post.body) %>

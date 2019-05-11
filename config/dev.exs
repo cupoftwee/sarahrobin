@@ -7,6 +7,11 @@ use Mix.Config
 # watchers to your application. For example, we use it
 # with webpack to recompile .js and .css sources.
 config :sarahrobin, SarahrobinWeb.Endpoint,
+  # secret_key_base: "vOWBDjSdXpFfmXDiMFOiv0uO6lmIfFEXLpCawWhkds1ahc6jXW3So3cDiLXimXKC",
+  # secret_key_base: "6/sxMKB//wU5R7QSknNWbLrby8oyTkfKe+OtVivskdkFuda+Af2Kmv7bhXAfrflY",
+  # For some reason, my invocation of System.get_env("SECRET_KEY_BASE") isn't 
+  # working locally? v strange. 
+  secret_key_base: "vOWBDjSdXpFfmXDiMFOiv0uO6lmIfFEXLpCawWhkds1ahc6jXW3So3cDiLXimXKC",
   http: [port: 4000],
   debug_errors: true,
   code_reloader: true,

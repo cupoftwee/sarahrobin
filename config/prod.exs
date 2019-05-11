@@ -25,7 +25,8 @@ config :sarahrobin, SarahrobinWeb.Endpoint,
 
 config :sarahrobin, Sarahrobin.Repo,
   adapter: Ecto.Adapters.Postgres,
-  url: System.get_env("DATABASE_URL"),
+  url: {:system, "DATABASE_URL"},
+  database: "",
   ssl: true,
   pool_size: 2 # Free tier db only allows 4 connections. Rolling deploys need pool_size*(n+1) connections.
 # config :sarahrobin, SarahrobinWeb.Endpoint,

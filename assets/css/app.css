@@ -36,9 +36,10 @@ p {
 a {
   text-decoration: none;
   color: inherit;
-}
-a:hover {
-  color: inherit;
+
+  &:hover {
+    color: inherit;
+  }
 }
 
 
@@ -60,24 +61,27 @@ a:hover {
   left: 0;
   overflow-x: hidden;
   padding-top: 65px;
-}
-.sidenav a {
-  padding: 10px 10px 10px 16px;
-  font-size: 14px;
-  color: #eee;
-  display: block;
-}
-.sidenav a:hover {
-  color: white;
-  text-decoration: none;
-  background: #191e23;
-}
-.sidenav a i {
-  color: #9ca1a6;
-  font-size: 18px;
-  width: 25px;
-  text-align: center; 
-  padding-right: 10px;
+
+  a {
+    padding: 10px 10px 10px 16px;
+    font-size: 14px;
+    color: #eee;
+    display: block;
+
+    &:hover {
+      color: white;
+      text-decoration: none;
+      background: #191e23;
+    }
+
+    i {
+      color: #9ca1a6;
+      font-size: 18px;
+      width: 25px;
+      text-align: center; 
+      padding-right: 10px;
+    }
+  }
 }
 @media screen and (max-height: 450px) {
   .sidenav {
@@ -91,7 +95,6 @@ a:hover {
 }
 
 /* my stuff */
-
 *,
 *:before,
 *:after {
@@ -128,9 +131,9 @@ p {
   margin-bottom: 3vh;
   font-weight: 400;
 }
-/* // p + p {
-//   text-indent: 0.7em;
-// } */
+/* p + p {
+  text-indent: 0.7em;
+} */
 
 blockquote p {
   /* Only Safari gets the fun type nerd stuff :( */
@@ -147,19 +150,13 @@ blockquote p {
 
 section {
   min-height: 85vh;
-  /* // // Horizontal padding in sections is determined by current page width 
-  // // minus rough estimate at reasonable measure for body text font-size, 
-  // // divided by two since its padding on either side. ch is a problematic
-  // // unit, but it sure is handy and lightweight.
-  // padding: 10vh calc((100vw - 55ch) / 2); */
+  padding: 10vh calc((100vw - 55ch) / 2);
   background: #eee;
 
   p span {
     font-weight: 600;
   }
 }
-
-
 
 
 
@@ -200,39 +197,43 @@ section {
   justify-content: space-between;
   align-items: center;
 }
+
 .splash__title {
   text-align: center;
-}
-.splash__title .title__logotype {
-  display: block;
-  text-transform: uppercase;
-  color: white;
-  font-size: 64px;
-  letter-spacing: 0.3em;
-  margin-bottom: 0.2em;
-  margin-top: 10vw;
-}
-.splash__title .title__subtitle {
-  font-weight: 300;
-  font-size: 48px;
-  font-style: italic;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-  color: whitesmoke;
+
+  .title__logotype {
+    display: block;
+    text-transform: uppercase;
+    color: white;
+    font-size: 64px;
+    letter-spacing: 0.3em;
+    margin-bottom: 0.2em;
+    margin-top: 10vw;
+  }
+
+  .title__subtitle {
+    font-weight: 300;
+    font-size: 48px;
+    font-style: italic;
+    word-spacing: 5px;
+    padding-bottom: 15px;
+    color: whitesmoke;
+  }
 }
 
 .splash__social-links {
   display: flex;
-}
-.splash__social-links .social-links__link {
-  display: block;
-  padding: 0 1em;
+
+  .social-links__link {
+    display: block;
+    padding: 0 1em;
+  }
 }
 
 .home__about {
   display: flex;
   
-  /* .about__details {
+  .about__details {
     margin-right: 5vw;
 
     .details__pic {
@@ -240,10 +241,6 @@ section {
       margin-top: 12px;
     }
   }
-
-  .about__bio {
-
-  } */
 }
 
 .home__links {

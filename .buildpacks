@@ -1,5 +1,5 @@
-https://github.com/milner-group/heroku-buildpack-imagemagick/tree/new-stacks
 https://github.com/gigalixir/gigalixir-buildpack-clean-cache.git
+https://github.com/minifast/heroku-buildpack-imagemagick.git
 https://github.com/HashNuke/heroku-buildpack-elixir
 https://github.com/gjaldon/heroku-buildpack-phoenix-static
 https://github.com/gigalixir/gigalixir-buildpack-mix.git

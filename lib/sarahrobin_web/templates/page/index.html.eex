@@ -6,7 +6,7 @@
         <div class="card">
           <img 
             class="card-img-top" 
-            src="<%= SarahrobinWeb.Uploaders.Cover.url({@post.cover, @post}, :thumb) %>" 
+            src="<%= SarahrobinWeb.Uploaders.Cover.url({post.cover, post}, :thumb) %>" 
             alt="Card image">
 
           <div class="card-body">

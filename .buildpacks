@@ -1,4 +1,4 @@
-https://github.com/celtra/heroku-buildpack-imagemagick-7.0.8.git
+https://github.com/milner-group/heroku-buildpack-imagemagick.git
 https://github.com/gigalixir/gigalixir-buildpack-clean-cache.git
 https://github.com/HashNuke/heroku-buildpack-elixir
 https://github.com/gjaldon/heroku-buildpack-phoenix-static

@@ -10,12 +10,12 @@
     <title>Sarah Robin | Design & Engineering</title>
 
   
-    <%# Old template stuff - to be removed %>
+    <%# TODO: Old template stuff - to be removed %>
     <%# <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> %>
     <%# <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700" rel="stylesheet"> %>
 
     <%# Actual styling %>
-    <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>">
+    <%# TODO: put compiled link back %>
     <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,600,600i,700,700i|Oswald:200,300,400,500,600,700|Fira+Sans:300,400,500" rel="stylesheet">
   </head>
 

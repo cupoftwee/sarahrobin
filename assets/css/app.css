@@ -6,14 +6,6 @@
 body {
   font-family: 'Fira Sans', -apple-system, BlinkMacSystemFont,
     'Helvetica Neue', 'Segoe UI', Roboto, Arial, sans-serif;
-
-  div {
-    background: gainsboro;
-
-    div {
-      background: silver;
-    }
-  }
   /* font-size: 2vw;
   line-height: 1.5;
   -ms-text-size-adjust: 100%;

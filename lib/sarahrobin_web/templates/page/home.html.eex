@@ -12,19 +12,23 @@
 
     <ul class="splash__social-links">
       <li class="social-links__link">
-        <a target="_blank">Github</a>
+        <%= link("Home", to: Routes.page_path(@conn, :home), class: "nav-link") %>
+        <%# <a target="_blank">Github</a> %>
       </li>
 
       <li class="social-links__link">
-        <a target="_blank">Dribbble</a>
+        <%= link("Work", to: Routes.page_path(@conn, :work), class: "nav-link") %>
+        <%# <a target="_blank">Dribbble</a> %>
       </li>
 
       <li class="social-links__link">
-        <a target="_blank">LinkedIn</a>
+        <%= link("Writing", to: Routes.page_path(@conn, :index), class: "nav-link") %>
+        <%# <a target="_blank">LinkedIn</a> %>
       </li>
 
       <li class="social-links__link">
-        <a target="_blank">Twitter</a>
+        <%= link("Contact", to: Routes.page_path(@conn, :home), class: "nav-link") %>
+        <%# <a target="_blank">Twitter</a> %>
       </li>
     </ul>
   </section>

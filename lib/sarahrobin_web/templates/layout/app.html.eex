@@ -40,6 +40,7 @@
         <% end %>
       </main>
 
+      <%= render "footer.html", conn: @conn %>
     </div>
     <script src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
   </body>

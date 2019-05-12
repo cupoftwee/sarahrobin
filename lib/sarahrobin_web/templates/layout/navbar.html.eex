@@ -20,20 +20,18 @@
         </li>
 
         <li class="nav-item">
-          <%= link("Blog", to: Routes.page_path(@conn, :index), class: "nav-link") %>
+          <%= link("Writing", to: Routes.page_path(@conn, :index), class: "nav-link") %>
         </li>
 
         <li class="nav-item">
           <%= if Sarahrobin.Auth.Accounts.is_current_user_admin?(@conn) do %>
-            <%= link("Dashboard", to: Routes.admin_home_path(@conn, :index), class: "nav-link") %>
+            <%= link("Admin", to: Routes.admin_home_path(@conn, :index), class: "nav-link") %>
           <% end %>
         </li>
 
         <li class="nav-item">
           <%= if Sarahrobin.Auth.Accounts.get_current_user(@conn) do %>
-            <%= link("Logout", to: Routes.session_path(@conn, :new), method: :delete, class: "nav-link") %>
-          <% else %>
-            <%= link("Login", to: Routes.session_path(@conn, :new), class: "nav-link") %>
+            <%= link("Log out", to: Routes.session_path(@conn, :new), method: :delete, class: "nav-link") %>            
           <% end %>
         </li>
 

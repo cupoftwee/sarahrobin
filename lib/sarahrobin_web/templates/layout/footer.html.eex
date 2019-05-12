@@ -1,0 +1,23 @@
+<footer>
+   <ul class="splash__social-links">
+      <li class="social-links__link">
+        <%= link("Home", to: Routes.page_path(@conn, :home), class: "nav-link") %>
+        <a target="_blank">Github</a>
+      </li>
+
+      <li class="social-links__link">
+        <%= link("Work", to: Routes.page_path(@conn, :work), class: "nav-link") %>
+        <a target="_blank">Dribbble</a>
+      </li>
+
+      <li class="social-links__link">
+        <%= link("Writing", to: Routes.page_path(@conn, :index), class: "nav-link") %>
+        <a target="_blank">LinkedIn</a>
+      </li>
+
+      <li class="social-links__link">
+        <%= link("Contact", to: Routes.page_path(@conn, :home), class: "nav-link") %>
+        <a target="_blank">Twitter</a>
+      </li>
+    </ul>
+</footer>

@@ -1,5 +1,8 @@
+var tailwindcss = require('tailwindcss')('./tailwind.config.js')
+
 module.exports = {
   plugins: {
+    tailwindcss,
     "postcss-plugin": {},
     "cssnano":{ preset: 'default' },
     "postcss-import": {},

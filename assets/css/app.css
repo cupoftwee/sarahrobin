@@ -1,33 +1,54 @@
-/* Main CSS file */
-
-/* Tailwind reset/normalize & component classes */
-@import "tailwindcss/preflight";
+@import "tailwindcss/base";
 @import "tailwindcss/components";
-
-/* Load custom tailwind component modules here */
-
-/* Tailwind utility classes generated from config */
 @import "tailwindcss/utilities";
 
-/* Non-Tailwind Styles */
-@import "./phoenix.css";
 
-/* Type */
-html, body {
+body {
   font-family: 'Fira Sans', -apple-system, BlinkMacSystemFont,
     'Helvetica Neue', 'Segoe UI', Roboto, Arial, sans-serif;
-  font-size: 2vw;
+
+  div {
+    background: gainsboro;
+
+    div {
+      background: silver;
+    }
+  }
+  /* font-size: 2vw;
   line-height: 1.5;
-  /* word-spacing: 0.3px; */
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased; */
 }
 
+
+
+
+/* Non-Tailwind Styles */
+/* @import "./phoenix.css"; */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box;
+  overflow-x: hidden; */
+}
+
+/* Type */
+/* body {
+  font-family: 'Fira Sans', -apple-system, BlinkMacSystemFont,
+    'Helvetica Neue', 'Segoe UI', Roboto, Arial, sans-serif;
+  /* font-size: 2vw;
+  line-height: 1.5;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased; */
+/*} */
+
 h1, h2, h3, h4 {
-  margin-bottom: 1vw;
+  /* margin-bottom: 1vw; */
 }
 h1, h2 {
   font-family: 'Crimson Text', serif;
@@ -38,13 +59,13 @@ h3, h4 {
 }
 
 p {
-  margin: 0 auto;
-  margin-bottom: 3vh;
-  font-weight: 400;
+  /* margin: 0 auto; */
+  /* margin-bottom: 3vh; */
+  /* font-weight: 400; */
 }
-/* // p + p {
-//   text-indent: 0.7em;
-// } */
+/* p + p {
+  text-indent: 0.7em;
+} */
 
 blockquote p {
   /* Only Safari gets the fun type nerd stuff :( */
@@ -61,38 +82,37 @@ blockquote p {
 }
 
 section {
-  min-height: 85vh;
-  /* // // Horizontal padding in sections is determined by current page width 
+  /* min-height: 85vh; */
+  /* Horizontal padding in sections is determined by current page width 
   // // minus rough estimate at reasonable measure for body text font-size, 
   // // divided by two since its padding on either side. ch is a problematic
   // // unit, but it sure is handy and lightweight.
   // padding: 10vh calc((100vw - 55ch) / 2); */
-  background: #eee;
+  /* background: #eee; */
 
-  p span {
+  /* p span {
     font-weight: 600;
-  }
+  } */
 }
 
 
 
 
 
-
-.page__home {
-  min-height:100vh;
-  min-width: 100vw;
+/* .page__home {
   background: none;
   background-color: lightgreen;
-  /* background-color: #eee; */
+  background-color: #eee; */
   /* background-image: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
                     linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
                     linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%); */
-  background-size: 200% 200%;
+  /* background-size: 200% 200%;
+  background-size: 100% 100%;
   background-attachment: fixed;
   animation: bg-move 10s infinite;
   will-change: background-position;
-}
+} */
+/* BG animation after we've figured everything else out */
 /* @keyframes bg-move {
   0%, 100% {
     background-position: 0% 0%;
@@ -107,45 +127,39 @@ section {
     background-position: 50% 50%;
   }
 } */
+.page__home {
+  width: 100%;
+  height: 100%;
+  background-color: lightgreen;
+}
 
-.home__splash {
+/* .home__splash {
   max-height: 85vh;
   background: none;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-}
+} */
+
 .splash__title {
   text-align: center;
 }
 .splash__title .title__logotype {
-  display: block;
   text-transform: uppercase;
   color: white;
   font-size: 64px;
   letter-spacing: 0.3em;
-  margin-bottom: 0.2em;
-  margin-top: 10vw;
 }
 .splash__title .title__subtitle {
   font-weight: 300;
   font-size: 48px;
   font-style: italic;
   word-spacing: 5px;
-  padding-bottom: 15px;
   color: whitesmoke;
 }
 
-.splash__social-links {
-  display: flex;
-}
-.splash__social-links .social-links__link {
-  display: block;
-  padding: 0 1em;
-}
-
-.home__about {
+/* .home__about {
   display: flex;
   
   .about__details {
@@ -160,12 +174,17 @@ section {
   .about__bio {
 
   }
-}
+} */
 
-.home__links {
+/* .home__links {
   min-height: 15vh;
   background: none;
   color: whitesmoke;
   display: flex;
   justify-content: space-between;
+} */
+
+/* Tailwind starter template css */
+.gradient {
+  background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
 }

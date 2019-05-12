@@ -16,12 +16,11 @@ defmodule SarahrobinWeb.Uploaders.Cover do
     {:convert, "-strip -thumbnail 250x250^ -gravity center -extent 250x250 -format jpg", :jpg}
   end
 
-  def storage_dir(version, {file, scope}) do
-    "uploads/posts/cover/#{version}"
+  def filename(version, {file, scope}) do
+    file_name = Path.basename(file.file_name, Path.extname(file.file_name))
+    "#{scope.id}_#{version}_#{file_name}"
   end
 
-  def default_url(:thumb) do
-    "https://placehold.it/100x100"
-  end
+
 
 end

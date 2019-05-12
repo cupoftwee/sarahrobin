@@ -11,8 +11,8 @@
 
   
     <%# Old template stuff - to be removed %>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700" rel="stylesheet">
+    <%# <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> %>
+    <%# <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700" rel="stylesheet"> %>
 
     <%# Actual styling %>
     <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>">
@@ -23,25 +23,26 @@
     <%= if Map.has_key?(@conn.assigns, :navbar) do %>
       <%= render "navbar.html", conn: @conn %>
     <% end %>
-    
-    <div class="container-fluid">
+
+    <main role="main">
+      <%= if Map.has_key?(@conn.assigns, :sidebar) do %>
+        <%= render "sidebar.html", conn: @conn %>
+
+        <div class="main">
+          <%= render @view_module, @view_template, assigns %>
+        </div>
+      <% else %>
+        <%= render @view_module, @view_template, assigns %>
+      <% end %>
+    </main>
+
+    <div class="alert-container">
       <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
       <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
-
-      <main role="main">
-        <%= if Map.has_key?(@conn.assigns, :sidebar) do %>
-          <%= render "sidebar.html", conn: @conn %>
-
-          <div class="main">
-            <%= render @view_module, @view_template, assigns %>
-          </div>
-        <% else %>
-          <%= render @view_module, @view_template, assigns %>
-        <% end %>
-      </main>
-
-      <%= render "footer.html", conn: @conn %>
     </div>
+
+    <%= render "footer.html", conn: @conn %>
+
     <script src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
   </body>
 </html>

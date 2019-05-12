@@ -1,5 +1,5 @@
  <div class="page__home">
-  <section class="home__splash">
+  <section class="home__splash container flex flex-col items-center content-around justify-around bg-transparent">
     <div class="splash__title">
       <h1 class="title__logotype display-sans">
         sarah robin

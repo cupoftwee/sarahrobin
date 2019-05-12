@@ -20,7 +20,9 @@
   </head>
 
   <body>
-    <%= render "navbar.html", conn: @conn %>
+    <%= if Map.has_key?(@conn.assigns, :navbar) do %>
+      <%= render "navbar.html", conn: @conn %>
+    <% end %>
     
     <div class="container-fluid">
       <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
@@ -29,6 +31,7 @@
       <main role="main">
         <%= if Map.has_key?(@conn.assigns, :sidebar) do %>
           <%= render "sidebar.html", conn: @conn %>
+
           <div class="main">
             <%= render @view_module, @view_template, assigns %>
           </div>

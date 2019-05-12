@@ -7,22 +7,29 @@ defmodule SarahrobinWeb.PageController do
   
   def home(conn, _) do
     posts = Blog.get_published_posts()
-    render(conn, "home.html", posts: posts)
+    conn
+      |> render("home.html", posts: posts)
   end
 
   def work(conn, _) do
     posts = Blog.get_published_work()
-    render(conn, "work.html", posts: posts)
+    conn
+      |> assign(:navbar, true)
+      |> render("work.html", posts: posts)
   end
 
   def index(conn, _) do
     posts = Blog.get_published_posts()
-    render(conn, "blog.html", posts: posts)
+    conn
+      |> assign(:navbar, true)
+      |> render("blog.html", posts: posts)
   end
 
   def show(conn, %{"id" => slug}) do
     with %Post{} = post <- Blog.get(slug, true) do
-      render(conn, "show.html", post: post)
+      conn
+        |> assign(:navbar, true)
+        |> render("show.html", post: post)
     end
   end
 

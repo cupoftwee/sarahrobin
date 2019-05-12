@@ -1,10 +1,11 @@
-defmodule Sarahrobin.Plug.ShowSidebar do
+defmodule Sarahrobin.Plug.ShowNavbar do
   import Plug.Conn
 
   def init(options), do: options
 
   def call(conn, _) do
-    conn |> assign(:sidebar, true)
+    conn 
+      |> assign(:navbar, true)
   end
 
 end

@@ -17,8 +17,12 @@ defmodule SarahrobinWeb.Router do
     plug Plug.ShowSidebar
   end
 
+  pipeline :navbar do 
+    plug Plug.ShowNavbar
+  end
+
   scope "/admin", SarahrobinWeb, as: :admin do
-    pipe_through [:browser, :authenticated]
+    pipe_through [:browser, :authenticated, :navbar]
     get "/", Admin.HomeController, :index
     resources("/post", Admin.PostController) do
       get "/publish", Admin.PostController, :publish, as: :publish
@@ -31,7 +35,6 @@ defmodule SarahrobinWeb.Router do
     get "/work", PageController, :work
     resources("/blog", PageController, only: [:index, :show])
     resources("/session", SessionController, only: [:create, :new, :delete])
-    
   end
 
 end

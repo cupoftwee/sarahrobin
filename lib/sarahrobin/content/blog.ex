@@ -16,7 +16,6 @@ defmodule Sarahrobin.Content.Blog do
     Repo.all(from p in Post,
     where: p.published == true,
     preload: :user)
-     |> IO.inspect()
   end
 
   def get_published_work() do

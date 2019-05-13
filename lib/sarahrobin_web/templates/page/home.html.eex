@@ -1,57 +1,164 @@
  <div class="page__home">
-  <section class="home__splash container mx-auto flex flex-col items-center content-around justify-around bg-transparent">
+  <section style="min-height: 75vh; min-width: 100vw;" class="home__splash glass-bg container mx-auto flex flex-col items-center content-around justify-around">
     <div class="splash__title">
-      <h1 class="title__logotype display-sans">
+      <h1 class="title__logotype display-sans mt-24">
         sarah robin
       </h1>
 
-      <h2 class="title__subtitle">
+      <h2 class="title__subtitle display-serif">
         Design &amp; Engineering
       </h2>
     </div>
 
     <ul class="container mx-auto px-64 py-8 flex items-center content-around justify-around">
       <li class="">
-        <%= link("Home", to: Routes.page_path(@conn, :home), class: "nav-link") %>
+        <%= link("Home", to: Routes.page_path(@conn, :home), class: "text-white text-xl font-light uppercase tracking-widest hover:underline") %>
       </li>
 
       <li class="">
-        <%= link("Work", to: Routes.page_path(@conn, :work), class: "nav-link") %>
+        <%= link("Work", to: Routes.page_path(@conn, :work), class: "text-white text-xl font-light uppercase tracking-widest hover:underline") %>
       </li>
 
       <li class="">
-        <%= link("Writing", to: Routes.page_path(@conn, :index), class: "nav-link") %>
+        <%= link("Writing", to: Routes.page_path(@conn, :index), class: "text-white text-xl font-light uppercase tracking-widest hover:underline") %>
       </li>
 
       <li class="">
-        <%= link("Contact", to: Routes.page_path(@conn, :home), class: "nav-link") %>
+        <a href="#footer" class="text-white text-xl font-light uppercase tracking-widest hover:underline")>
+          Contact
+        </a>
       </li>
     </ul>
   </section>
 
-  <section class="home__about flex bg-white">
-    <div class="column about__details">
-      <img class="details__pic" src="http://placehold.it/200x200">
+  <svg viewBox="0 0 1428 174" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="scale(1, -1) translate(0, -100)">
+      <g transform="translate(-2.000000, 44.000000)" fill="#FFFFFF" fill-rule="nonzero">
+        <path d="M0,0 C90.7283404,0.927527913 147.912752,27.187927 291.910178,59.9119003 C387.908462,81.7278826 543.605069,89.334785 759,82.7326078 C469.336065,156.254352 216.336065,153.6679 0,74.9732496" opacity="0.100000001"></path>
+        <path d="M100,104.708498 C277.413333,72.2345949 426.147877,52.5246657 546.203633,45.5787101 C666.259389,38.6327546 810.524845,41.7979068 979,55.0741668 C931.069965,56.122511 810.303266,74.8455141 616.699903,111.243176 C423.096539,147.640838 250.863238,145.462612 100,104.708498 Z" opacity="0.1"></path>
+        <path d="M1046,51.6521276 C1130.83045,29.328812 1279.08318,17.607883 1439,40.1656806 L1439,120 C1271.17211,77.9435312 1140.17211,55.1609071 1046,51.6521276 Z" id="Path-4" opacity="0.200000003"></path>
+      </g>
+
+      <g transform="translate(-4.000000, 76.000000)" fill="#FFFFFF" fill-rule="nonzero">
+        <path d="M0.457,34.035 C57.086,53.198 98.208,65.809 123.822,71.865 C181.454,85.495 234.295,90.29 272.033,93.459 C311.355,96.759 396.635,95.801 461.025,91.663 C486.76,90.01 518.727,86.372 556.926,80.752 C595.747,74.596 622.372,70.008 636.799,66.991 C663.913,61.324 712.501,49.503 727.605,46.128 C780.47,34.317 818.839,22.532 856.324,15.904 C922.689,4.169 955.676,2.522 1011.185,0.432 C1060.705,1.477 1097.39,3.129 1121.236,5.387 C1161.703,9.219 1208.621,17.821 1235.4,22.304 C1285.855,30.748 1354.351,47.432 1440.886,72.354 L1441.191,104.352 L1.121,104.031 L0.457,34.035 Z"></path>
+      </g>
+
+      <animateTransform 
+        attributeName="transform"
+        attributeType="XML"
+        type="translate"
+        from="0 0"
+        to="100% 0"
+        dur="10s"
+        repeatCount="indefinite"/>
+	  </g>
+	</svg>
+
+  <section class="home__about flex justify-around bg-white px-32 py-20">
+    <div class="about__details">
+      <img class="details__pic rounded-full border-8 border-purple-300" src="http://placehold.it/200x200">
     </div>
 
-    <div class="column about__bio">
-      <p>
-        <span>Hi! I'm a designer and engineer</span> who builds web and mobile applications.
-        My passion is for finding and implementing reliable solutions for everyday 
-        problems that people face.
+    <div class="about__bio max-w-xl">
+      <p class="text-2xl font-semibold">
+        Hi! I'm a designer and engineer who enjoys building platforms and 
+        technologies that make people’s lives better. Also, pretty web things!
       </p>
-
       <p>
-        For <strong>development</strong>, I commonly work w/ a varied Javascript stack for rapid 
-        prototyping and full-stack MVP projects, though I enjoy Ruby for side
-        projects and dabbling in Python.
+        For development, I usually work w/ a varied Javascript stack for rapid 
+        prototyping and full-stack MVP projects. I also tinker in Elixir/Phoenix, 
+        love writing Ruby (both on server and client), and I'm learning Rust
+        in my off-time. <br />
+        <a href="http://github.com/cupoftwee" target="_blank" class="text-purple-600 underline font-semibold mb-2 text-right block">
+        You can find my code on Github &#8594;</a>
       </p>
-
       <p>
-        For <strong>design</strong>, I prefer an empathetic and people-centered approach to 
-        product development and user experience, that works towards responsible 
-        growth.
+        For design, I try to practice an empathetic approach to product dev and UX 
+        that enables responsible growth. Design isn't only how it works,
+        but also who it works for. <br />
+        <a href="http://dribbble.com/cupoftwee" target="_blank" class="text-purple-600 underline font-semibold mb-2 text-right block">
+        You can find my design work on Dribbble &#8594;</a>
+      </p>
+      <p>
+        For pretty web things, I tend to work in CSS, Canvas, and SVG. My current 
+        process is to program simulated life forms that scurry about, spilling pixels 
+        all over the canvas in new and beautiful ways. <br />
+        <a href="https://glitch.com/@cupoftwee" target="_blank" class="text-purple-600 underline font-semibold mb-2 text-right block">
+        You can find my spilled pixels on Glitch &#8594;</a>
       </p>
     </div>
+  </section>
+
+  <%# This should be made into its own layout/components/partials/whathaveyou %>
+  <section class="glass-bg glass-border px-32 py-20">
+    <h2 class="flex justify-between align-center">
+      <span>Recent Work</span>
+      <span><a class="text-xl" hrf="">
+        See All &#8594;</a>
+      </span>
+    </h2>
+
+    <%# Most recent 3 work posts %>
+    <ul class="card-grid mt-16">
+      <li class="card">
+        <img class="card-cover" src="https://picsum.photos/300/200/" alt="Sunset in the mountains">
+        
+        <div class="bg-white px-6 py-3 rounded-b-lg">
+          <h4 class="font-bold text-xl mb-2">
+            <a href="">PillPanda</a>
+          </h4>
+
+          <p class="text-gray-700 text-sm">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla!
+          </p>
+
+          <ul class="card-tag-grid">
+            <li class="card-tag">#mobile-app</span>
+            <li class="card-tag">#ruby</span>
+            <li class="card-tag">#pwa</span>
+          </ul>
+        </div>
+      </li>
+
+      <li class="card">
+        <img class="card-cover" src="https://picsum.photos/300/200/" alt="Sunset in the mountains">
+        
+        <div class="bg-white px-6 py-3 rounded-b-lg">
+          <h4 class="font-bold text-xl mb-2">
+            <a href="">Buttergarden</a>
+          </h4>
+
+          <p class="text-gray-700 text-sm">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla!
+          </p>
+
+          <ul class="card-tag-grid">
+            <li class="card-tag">#ruby</span>
+            <li class="card-tag">#full-stack</span>
+            <li class="card-tag">#web-app</span>
+          </ul>
+        </div>
+      </li>
+
+      <li class="card">
+        <img class="card-cover" src="https://picsum.photos/300/200/" alt="Sunset in the mountains">
+        
+        <div class="bg-white px-6 py-3 rounded-b-lg">
+          <h4 class="font-bold text-xl mb-2">
+            <a href="">Conway's Game of Paint</a>
+          </h4>
+
+          <p class="text-gray-700 text-sm">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla!
+          </p>
+
+          <ul class="card-tag-grid">
+            <li class="card-tag">#ruby</span>
+            <li class="card-tag">#generative</span>
+            <li class="card-tag">#canvas</span>
+          </ul>
+        </div>
+      </li>
+    </ul>
   </section>
 </div>

@@ -1,68 +1,14 @@
-@import "tailwindcss/base";
+@import "./base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-
+/* 
 body {
   font-family: 'Fira Sans', -apple-system, BlinkMacSystemFont,
-    'Helvetica Neue', 'Segoe UI', Roboto, Arial, sans-serif;
-  /* font-size: 2vw;
-  line-height: 1.5;
+    'Helvetica Neue', 'Segoe UI', Roboto, Arial, sans-serif; 
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased; */
-}
-
-
-
-
-/* Non-Tailwind Styles */
-/* @import "./phoenix.css"; */
-
-html, body {
-  margin: 0;
-  padding: 0;
-  /* box-sizing: border-box;
-  overflow-x: hidden; */
-}
-
-/* Type */
-/* body {
-  font-family: 'Fira Sans', -apple-system, BlinkMacSystemFont,
-    'Helvetica Neue', 'Segoe UI', Roboto, Arial, sans-serif;
-  /* font-size: 2vw;
-  line-height: 1.5;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased; */
-/*} */
-
-h1, h2, h3, h4 {
-  /* margin-bottom: 1vw; */
-}
-h1, h2 {
-  font-family: 'Crimson Text', serif;
-}
-h3, h4 {
-  font-family: 'Oswald', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-}
-
-p {
-  /* margin: 0 auto; */
-  /* margin-bottom: 3vh; */
-  /* font-weight: 400; */
-}
-/* p + p {
-  text-indent: 0.7em;
 } */
-
-blockquote p {
-  /* Only Safari gets the fun type nerd stuff :( */
-  hanging-punctuation: first;
-}
 
 .display-sans {
   font-family: 'Oswald', -apple-system, BlinkMacSystemFont,
@@ -73,37 +19,90 @@ blockquote p {
   font-family: 'Crimson Text', serif;
 }
 
-section {
-  /* min-height: 85vh; */
-  /* Horizontal padding in sections is determined by current page width 
-  // // minus rough estimate at reasonable measure for body text font-size, 
-  // // divided by two since its padding on either side. ch is a problematic
-  // // unit, but it sure is handy and lightweight.
-  // padding: 10vh calc((100vw - 55ch) / 2); */
-  /* background: #eee; */
+/* Tailwind starter template css */
+.gradient {
+  background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+}
 
-  /* p span {
-    font-weight: 600;
-  } */
+/* Section Styles */
+section {
+  &.glass-bg {
+    background: transparent;
+
+    &.glass-border {
+      border-top:     2rem solid rgba(247, 250, 252, 0.65);
+      border-bottom:  2rem solid rgba(247, 250, 252, 0.65);
+      box-shadow: inset 0 1.5rem 0 rgba(247, 250, 252, 0.35), 
+                  inset 0 -1.5rem 0 rgba(247, 250, 252, 0.35);
+    }
+    &.glass-border-top {
+      border-top: 2rem solid rgba(247, 250, 252, 0.65);
+      box-shadow: inset 0 1.5rem 0 rgba(247, 250, 252, 0.35);
+    }
+    &.glass-border-bottom {
+      border-bottom: 2rem solid rgba(247, 250, 252, 0.65);
+      box-shadow: inset 0 -1.5rem 0 rgba(247, 250, 252, 0.35);
+    }
+
+    h2 { @apply text-white text-5xl mb-5; }
+
+    .backdrop {
+      background: rgba(247, 250, 252, 0.65);
+      @apply rounded;
+    }
+  }
+}
+
+.card-grid {
+  @apply flex justify-around -mx-2;
+
+  .card {
+    @apply max-w-xs mx-6;
+  }
+}
+.card {
+  @apply rounded-lg overflow-hidden relative cursor-pointer;
+
+  /* Allows for title link to cover whole card */
+  h4 a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .card-cover {
+    @apply w-full object-cover rounded-t-lg;
+  }
+
+  .card-tag-grid {
+    @apply bottom-0 mt-4 flex flex-wrap;
+
+    .card-tag {
+      @apply inline-block px-2 py-1 mb-1 mr-1;
+      @apply bg-gray-200 rounded-full;
+      @apply text-xs font-semibold text-gray-700;
+    }
+  }
 }
 
 
-
-
-
-/* .page__home {
+/* ---- HOME PAGE ---- */
+.page__home {
   background: none;
-  background-color: lightgreen;
-  background-color: #eee; */
-  /* background-image: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
+  background-color: #eee;
+  background-image: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
                     linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
-                    linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%); */
-  /* background-size: 200% 200%;
+                    linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
   background-size: 100% 100%;
   background-attachment: fixed;
+  /* 
+  background-size: 200% 200%;
   animation: bg-move 10s infinite;
-  will-change: background-position;
-} */
+  will-change: background-position; */
+}
 /* BG animation after we've figured everything else out */
 /* @keyframes bg-move {
   0%, 100% {
@@ -119,20 +118,12 @@ section {
     background-position: 50% 50%;
   }
 } */
+
 .page__home {
   width: 100%;
   height: 100%;
   background-color: lightgreen;
 }
-
-/* .home__splash {
-  max-height: 85vh;
-  background: none;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-} */
 
 .splash__title {
   text-align: center;
@@ -140,43 +131,14 @@ section {
 .splash__title .title__logotype {
   text-transform: uppercase;
   color: white;
-  font-size: 64px;
-  letter-spacing: 0.3em;
+  font-size: 4.5rem;
+  letter-spacing: 0.25em;
 }
 .splash__title .title__subtitle {
-  font-weight: 300;
-  font-size: 48px;
+  font-weight: 600;
+  font-size: 3rem;
   font-style: italic;
+
   word-spacing: 5px;
   color: whitesmoke;
-}
-
-/* .home__about {
-  display: flex;
-  
-  .about__details {
-    margin-right: 5vw;
-
-    .details__pic {
-      border-radius: 100px;
-      margin-top: 12px;
-    }
-  }
-
-  .about__bio {
-
-  }
-} */
-
-/* .home__links {
-  min-height: 15vh;
-  background: none;
-  color: whitesmoke;
-  display: flex;
-  justify-content: space-between;
-} */
-
-/* Tailwind starter template css */
-.gradient {
-  background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
 }

@@ -1,0 +1,43 @@
+@import "tailwindcss/base";
+/* 
+  ---- CUSTOMIZED BASE STYLES ---- 
+  This module must be imported before
+  Tailwind's components & utils.
+*/
+
+/* ---- Typography ---- */
+html, body {
+  @apply tracking-normal leading-normal antialiased;
+  @apply font-normal text-base;
+  scroll-behavior: smooth;
+}
+h1, h2, h3, h4, h5, h6 {
+  @apply leading-relaxed font-bold;
+}
+h1 { @apply text-4xl; }
+h2 { @apply text-2xl; }
+h3 { @apply text-xl; }
+/* h1, h2 {
+  font-family: 'Crimson Text', serif;
+} */
+/* h3, h4 {
+  font-family: 'Oswald', -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+} */
+
+p, li { @apply text-lg mb-5; }
+
+blockquote p {
+  /* Only Safari gets the fun type nerd stuff :( */
+  hanging-punctuation: first;
+}
+
+a {
+  @apply text-lg cursor-pointer;
+
+  &:hover {
+    @apply underline;
+  }
+}
+
+ul { @apply list-inside; }

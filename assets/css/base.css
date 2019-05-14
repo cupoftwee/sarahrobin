@@ -12,7 +12,8 @@ html, body {
   scroll-behavior: smooth;
 }
 h1, h2, h3, h4, h5, h6 {
-  @apply leading-relaxed font-bold;
+  @apply leading-relaxed font-bold text-black;
+
 }
 h1 { @apply text-4xl; }
 h2 { @apply text-2xl; }
@@ -20,12 +21,8 @@ h3 { @apply text-xl; }
 /* h1, h2 {
   font-family: 'Crimson Text', serif;
 } */
-/* h3, h4 {
-  font-family: 'Oswald', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-} */
 
-p, li { @apply text-lg mb-5; }
+p, li { @apply text-lg mb-5 text-black; }
 
 blockquote p {
   /* Only Safari gets the fun type nerd stuff :( */

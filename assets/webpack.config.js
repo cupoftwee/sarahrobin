@@ -39,7 +39,7 @@ module.exports = (env, options) => ({
             loader: 'postcss-loader',
             options: {
               ident: 'postcss',
-              plugins: [require('postcss-nested'),require('postcss-import'),require('tailwindcss')]
+              plugins: [require('postcss-nested'),require('postcss-simple-vars'),require('postcss-import'),require('tailwindcss')]
             }
           }
         ]

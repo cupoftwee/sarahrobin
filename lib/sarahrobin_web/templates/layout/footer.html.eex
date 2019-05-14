@@ -1,4 +1,4 @@
-<footer id="footer" class="bg-white py-8 w-screen flex">
+<footer id="footer" class="bg-white border-t-glass bg-skew py-8 w-screen flex">
   <form class="w-1/2 mr-24">
     <h3>Drop me a line!</h3>
 

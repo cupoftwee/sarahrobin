@@ -1,4 +1,13 @@
-# Bleda
+# sarahrobin.dev | A personal blog & portfolio
+
+### Built with
+* Gridsome
+* Tailwind
+
+### Prior Art/Acknowledgements
+Cosmin Popovici for the Bleda boilerplate
+
+# Bleda Original docs
 
 > A blog starter theme for [Gridsome](https://gridsome.org), inspired by the [Attila](https://github.com/zutrinken/attila) Ghost theme and styled with [Tailwind CSS](https://tailwindcss.com).
 

@@ -3,6 +3,7 @@
 ### Built with
 * Gridsome
 * Tailwind
+* Bleda Gridsome starter
 
 ### Prior Art/Acknowledgements
 Cosmin Popovici for the Bleda boilerplate

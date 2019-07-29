@@ -12,8 +12,10 @@ module.exports = {
     colors: {
       transparent: 'transparent',
 
+      maxDark: '#000',
       black: '#22292f',
       white: '#fff',
+      maxBright: '#fff',
 
       gray: {
         100: '#f7fafc',
@@ -223,6 +225,7 @@ module.exports = {
     },
     fontFamily: {
       sans: [
+        // 'Oswald',
         'Fira Sans',
         '-apple-system',
         'BlinkMacSystemFont',
@@ -249,16 +252,21 @@ module.exports = {
       ],
     },
     fontSize: {
-      xs: '.75rem',
-      sm: '.875rem',
-      base: '1rem',
-      lg: '1.125rem',
-      xl: '1.25rem',
-      '2xl': '1.5rem',
-      '3xl': '1.875rem',
-      '4xl': '2.25rem',
-      '5xl': '3rem',
-      '6xl': '4rem',
+      xs: '0.75rem',
+      sm: '0.875rem',//   +0.125
+      base: '1rem',//     +0.125
+      lg: '1.125rem',//   +0.125
+      xl: '1.25rem',//    +0.125
+      '2xl': '1.5rem',//  +0.250 (doubled)
+      '3xl': '1.75rem',// +0.250
+      '4xl': '2.00rem',// +0.250
+      // '3xl': '1.875rem',//+0.375 (???)
+      // '4xl': '2.25rem',// +0.375
+      '5xl': '2.75rem',// +0.500 (???)
+      '6xl': '3.25rem',// +0.500 too small 
+      '7xl': '3.75rem',// +0.500 too big
+      '8xl': '5rem',//    +1.000
+      '9xl': '7rem',//    +2.000
     },
     fontWeight: {
       hairline: 100,

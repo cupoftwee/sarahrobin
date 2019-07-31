@@ -11,7 +11,6 @@
       <pagination 
         v-if="$page.posts.pageInfo.totalPages > 1"
         :info="$page.posts.pageInfo" 
-        class="pb-24 border-b-glass"
       />
   </DefaultLayout>
 </template>

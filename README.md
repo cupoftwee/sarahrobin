@@ -1,78 +1,27 @@
-# sarahrobin.dev | A personal blog & portfolio
+# `sarahrobin.dev`
 
-### Built with
-* Gridsome
-* Tailwind
-* Bleda Gridsome starter
+My professional services website and blog.
 
-### Prior Art/Acknowledgements
-Cosmin Popovici for the Bleda boilerplate
 
-# Bleda Original docs
+### How to install and run the site
+1. Install [Gridsome](https://gridsome.org/docs#how-to-install) locally using `$ yarn global add @gridsome/cli`.
+2. Clone the repository from `$ git clone https://github.com/cupoftwee/sarahrobin.git`.
+3. Run `$ yarn install` to have [Yarn](https://yarnpkg.com/en/) install all other local dependencies.
+4. `$ yarn develop` - Run local Gridsome dev server. Same as running `$ gridsome develop`; reloading webpack dev server should spin up and run on `localhost:8080`.
+5. `$ yarn build` - Compile for production to `/dist` folder.
 
-> A blog starter theme for [Gridsome](https://gridsome.org), inspired by the [Attila](https://github.com/zutrinken/attila) Ghost theme and styled with [Tailwind CSS](https://tailwindcss.com).
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/cossssmin/gridsome-starter-bleda)
+### This project built with
+* [Vue.js](https://vuejs.org/) - JS Framework
+* [Tailwindcss](https://tailwindcss.com/) - PostCSS/UI Framework
+* [Gridsome](https://gridsome.org/) - Vue-based, modular static site generation tool
+* [Bleda starter](https://github.com/cossssmin/gridsome-starter-bleda) - Gridsome boilerplate for blogging
+* [Netlify](http://netlify.com/) - Hosting & deployment automation
 
-## Demo
 
-- [Page](https://gridsome-starter-bleda.netlify.com/about/)
-- [Single post](https://gridsome-starter-bleda.netlify.com/getting-started-with-gridsome-and-bleda/)
-- [Blog archive](https://gridsome-starter-bleda.netlify.com/)
-- [Tags archive](https://gridsome-starter-bleda.netlify.com/tag/getting-started/)
-- [Author archive](https://gridsome-starter-bleda.netlify.com/author/gridsome/)
+### Prior Art & Acknolwedgments
+Working in (F)OSS means that you spend every day standing on the shoulders of giants. Today, I'm standing on quite a tall stack, but I'd like to mention that Cosmin Popovici's [Bleda Gridsome Starter](https://github.com/cossssmin/gridsome-starter-bleda) helped me get up and running quickly and easily, letting me focus on learning the full range of Gridsome's capabilities. 
 
-## Preview
+Cosmin's choice of theme inspiration as well, the [Attila](https://github.com/zutrinken/attila) Ghost theme, is a beautiful and solid foundation to build off of, and I am very grateful for their work 💖
 
-![Bleda starter for Gridsome devices preview](https://res.cloudinary.com/cossssmin/image/upload/v1551618609/os/gridsome/bleda/bleda-screenshot-devices.jpg)
-
-## Features
-
-- Sitemap
-- RSS Feed
-- Google Analytics
-- Custom 404 Page
-- Open Graph meta tags
-- Code syntax highlighting
-- Parallax post image covers
-- Option for fullscreen covers
-- Medium-like image lightbox
-- Taxonomies: Tags and Authors
-- Aproximate read time for posts
-- Post excerpts: automatic or user-defined
-- **Paginated** [blog](https://gridsome-starter-bleda.netlify.com/2/), [tag](https://gridsome-starter-bleda.netlify.com/tag/dummy/), and [author](https://gridsome-starter-bleda.netlify.com/author/gridsome/) archives
-- Easily show post dates in your locale (moment.js)
-- Posts show a warning if they're older than 1 year (configurable)
-
-## Installation
-
-It's recommended that you install Bleda with the `gridsome create` command, so that Gridsome removes the `.git` folder and installs NPM dependencies for you: 
-
-```sh 
-gridsome create my-website https://github.com/cossssmin/gridsome-starter-bleda.git
-```
-
-Alternatively, you can clone this repo and set it up manually:
-
-```sh 
-git clone https://github.com/cossssmin/gridsome-starter-bleda.git my-website
-
-# navigate to the directory
-cd my-website
-
-# remove the Git folder
-rm -rf .git
-
-# install NPM dependencies
-npm install
-```
-
-## Configuration
-
-See the [configuration notes](https://gridsome-starter-bleda.netlify.com/getting-started-with-gridsome-and-bleda/#configuration) in the Getting Started demo post.
-
-## Development
-
-Run `gridsome develop` to start a local development server, or `gridsome build` to build the static site into the `dist` folder.
-
-See the [Gridsome docs](https://gridsome.org/docs) for more information.
+Additionally, I have to make special note that this project could not have happened without the support of my wonderful and loving fiance along my friends who helped me push past an artistic block that had been clogging my heart for years. I'll spare this `README` the real sappy stuff, but if you're interested, I wrote about this process of this project further [in this blog post](https://sarahrobin.dev/writing/hello-world-portfolio-pt-1/).

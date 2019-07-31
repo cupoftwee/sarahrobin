@@ -41,7 +41,7 @@ module.exports = {
           },
           author: {
             typeName: 'Author',
-            route: '/author/:id',
+            route: '/about',
             create: true
           }
         }

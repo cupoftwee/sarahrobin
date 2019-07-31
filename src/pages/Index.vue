@@ -1,71 +1,126 @@
 <template>
-  <Layout class="bg-white">
-    <main>
-      <header>
-        <div class="max-w-xl md:max-w-3xl xl:max-w-4xl mx-auto text-center px-6 py-10 md:py-32 border-b border-gray-300">
-          <h1 class="text-4xl sm:text-5xl md:text-6xl font-sans font-bold mb-1">
-            <g-link to="/" class="text-black">Bleda</g-link>
+  <DefaultLayout hideNav class="page-home bg-rainbow">
+      <section class="page-home-splash b-glass container">
+        <div class="splash-title">
+          <h1 class="title-logotype display-sans sm:mt-12 md:mt-24 lg:mt-32">
+            sarah robin
           </h1>
-          <p class="text-gray-700 text-lg sm:text-3xl">Thoughts, stories, and ideas.</p>
-        </div>
-      </header>
 
-      <section>
-        <post-item v-for="edge in $page.posts.edges" :key="edge.node.id" :post="edge.node" />
+          <h2 class="title-subtitle text-5xl">
+            Design &amp; Engineering
+          </h2>
+        </div>
+
+        <ul class="home-nav">
+          <li><g-link to="/" class="nav-link">Home</g-link></li>
+
+          <li><g-link to="/about" class="nav-link">About</g-link></li>
+
+          <li class="sm:visible lg:hidden break"></li>
+
+          <li><g-link to="/writing" class="nav-link">Writing</g-link></li>
+          
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
       </section>
 
-      <pagination :info="$page.posts.pageInfo" v-if="$page.posts.pageInfo.totalPages > 1" />
-        
-      <site-footer class="py-8 sm:py-16" />
-    </main>
-  </Layout>
+      <Divider direction="up" />
+
+      <BriefBio teaser class="pt-6" />
+
+      <Divider direction="down" />
+
+      <RecentWork :posts="$page.posts" />
+  </DefaultLayout>
 </template>
 
 <script>
 import config from '~/.temp/config.js'
-import SiteFooter from '@/components/Footer'
+
 import PostItem from '@/components/PostItem'
-import Pagination from '@/components/Pagination'
+import NavMenu from '@/components/NavMenu'
+import BriefBio from '@/components/Biography'
+import Divider from '@/components/Divider'
+import RecentWork from '@/templates/RecentWork'
 
 export default {
   components: {
     PostItem,
-    Pagination,
-    SiteFooter,
+    NavMenu,
+    BriefBio,
+    Divider,
+    RecentWork
   },
+
   metaInfo () {
     return {
       title: this.config.siteName,
-      meta: [
-        { property: "og:type", content: 'website' },
-        { property: "og:title", content: this.config.siteName },
-        { property: "og:description", content: this.config.siteDescription },
-        { property: "og:url", content: this.config.siteUrl },
-        { property: "og:image", content: this.ogImageUrl },
-
-        { name: "twitter:card", content: "summary_large_image" },
-        { name: "twitter:title", content: this.config.siteName },
-        { name: "twitter:description", content: this.config.siteDescription },
-        { name: "twitter:site", content: "@cossssmin" },
-        { name: "twitter:creator", content: "@cossssmin" },
-        { name: "twitter:image", content: this.ogImageUrl },
-      ],
     }
   },
+
   computed: {
     config () {
       return config
-    },
-    ogImageUrl () {
-      return `${this.config.siteUrl}/images/bleda-card.png`
     }
   },
 }
 </script>
 
+<style>
+  .page-home {
+    width: 100%;
+    height: 100%;
+  }
+
+  .page-home-splash {
+    height: 75vh; 
+    width: 100vw;
+    position: relative;
+    overscroll-behavior: contain;
+    @apply mx-auto flex flex-col items-center content-around justify-around;
+  }
+
+  .home-nav {
+    z-index: 9;
+    @apply flex flex-wrap; 
+    @apply items-center content-around justify-around;
+    
+    @screen md {
+      @apply mx-auto w-full pt-6;
+    }
+
+    li {
+      @apply px-6 text-center;
+    }
+
+    a {
+      @apply text-xl text-maxBright font-thin;
+      @apply uppercase tracking-widest;
+    }
+  }
+
+  .splash-title {
+    text-align: center;
+  }
+
+  .splash-title .title-logotype {
+    @apply text-maxBright;
+    text-transform: uppercase;
+    font-size: 4.5rem;
+    letter-spacing: 0.25em;
+  }
+
+  .splash-title .title-subtitle {
+    font-family: 'Crimson Text', serif;
+    font-weight: 600;
+    font-style: italic;
+    word-spacing: 5px;
+  }
+</style>
+
 <page-query>
-  query Home ($page: Int) {
-    posts: allPost (page: $page, perPage: 6) @paginate {
+  query RecentWork ($page: Int) {
+    posts: allPost (page: $page, perPage: 3, sortBy: "date", filter:{ tags:{ contains:"Portfolio" } }) @paginate {
       totalCount
       pageInfo {
         totalPages
@@ -96,4 +151,3 @@ export default {
     }
   }
 </page-query>
-

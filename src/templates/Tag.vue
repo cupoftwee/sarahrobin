@@ -1,53 +1,54 @@
 <template>
-  <Layout>
-    <main>
-      <header>
-        <div class="max-w-xl md:max-w-3xl xl:max-w-4xl flex flex-col-reverse mx-auto text-center px-6 pt-24 pb-10 md:py-32 border-b border-gray-300">
-          <p class="text-gray-700 leading-normal">
-            {{ $page.tag.belongsTo.totalCount }} posts in total
-          </p>
+  <DefaultLayout 
+    :title="titleCase($page.tag.title)" 
+    mode="glass" 
+    :showNav="true" 
+    class="bg-rainbow border-t-glass-thin"
+  >
+    <header class="border-b-glass">
+      <div class="max-w-xl md:max-w-3xl xl:max-w-4xl flex flex-col-reverse mx-auto text-center px-6 pt-24 pb-10 md:py-32 border-b border-gray-300">
+        <p class="text-white leading-normal">
+          {{ $page.tag.belongsTo.totalCount }} posts in total
+        </p>
 
-          <h1 class="text-4xl sm:text-5xl md:text-6xl font-sans font-bold mb-2 capitalize">
-            {{ titleCase($page.tag.title) }}
-          </h1>
+        <h1 class="text-white text-4xl sm:text-5xl md:text-6xl font-sans font-bold mb-2 capitalize">
+          {{ titleCase($page.tag.title) }}
+        </h1>
 
-          <svg class="w-5 sm:w-6 fill-current text-gray-500 mx-auto mb-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" role="img" aria-labelledby="tagIcon">
-            <title id="tagIcon">Posts tagged</title>
-            
-            <path d="M0 10V2l2-2h8l10 10-10 10L0 10zm4.5-4a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
-          </svg>
-        </div>
+        <svg class="w-5 sm:w-6 fill-current text-white mx-auto mb-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" role="img" aria-labelledby="tagIcon">
+          <title id="tagIcon">Posts tagged</title>
 
-        <nav class="absolute top-0 left-0 z-20 mt-6 ml-6">
-          <g-link to="/" class="text-sm border text-gray-900 border-gray-400 opacity-75 hover:opacity-100 rounded-full px-4 py-2 transition-opacity">
-            &larr; Home
-          </g-link>
-        </nav>
-      </header>
+          <path d="M0 10V2l2-2h8l10 10-10 10L0 10zm4.5-4a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+        </svg>
+      </div>
+    </header>
 
-      <section>
-        <post-item v-for="edge in $page.tag.belongsTo.edges" :key="edge.node.id" :post="edge.node" />
-      </section>
-      
-      <pagination :base="`${$page.tag.path}`" :info="$page.tag.belongsTo.pageInfo" v-if="$page.tag.belongsTo.pageInfo.totalPages > 1" />
-      
-      <site-footer class="py-8 sm:py-16" />
-    </main>
-  </Layout>
+    <section class="bg-white">
+      <post-item v-for="edge in $page.tag.belongsTo.edges" :key="edge.node.id" :post="edge.node" />
+    </section>
+
+    <pagination 
+      v-if="$page.tag.belongsTo.pageInfo.totalPages > 1"
+      :base="`${$page.tag.path}`" 
+      :info="$page.tag.belongsTo.pageInfo" 
+    />
+  </DefaultLayout>
 </template>
 
 <script>
 import moment from 'moment'
 import config from '~/.temp/config.js'
 import PostItem from '@/components/PostItem'
-import SiteFooter from '@/components/Footer'
+import SiteFooter from '@/components/FooterMenu'
 import Pagination from '@/components/Pagination'
+import BackButton from '@/components/BackButton'
 
 export default {
   components: {
     PostItem,
     Pagination,
     SiteFooter,
+    BackButton
   },
   metaInfo () {
     return {

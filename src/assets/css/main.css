@@ -4,8 +4,358 @@
 
 @import 'components/resets';
 
-@import 'tailwindcss/components';
-
-@import 'components/markdown';
-
 @import 'tailwindcss/utilities';
+
+/* 
+  ---- CUSTOMIZED BASE STYLES ---- 
+  This module must be imported before
+  Tailwind's components & utils.
+*/
+
+/* ---- Layout ---- */
+/* 
+  * Inserting this collapsed row between two flex items will make 
+  * the flex item that comes after it break to a new row 
+*/
+ .break {
+  flex-basis: 100%;
+  height: 0;
+}
+
+
+/* ---- Typography ---- */
+html, body {
+  @apply tracking-normal leading-normal antialiased;
+  @apply font-normal text-base;
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply leading-relaxed font-bold text-black;
+}
+
+h1 { @apply text-4xl; }
+h2 { @apply text-2xl; }
+h3 { @apply text-xl; }
+
+p, li { @apply text-lg mb-5 text-black; }
+
+blockquote p {
+  /* Only Safari gets the fun type nerd stuff :( */
+  hanging-punctuation: first;
+}
+
+.nav-link {
+  @apply relative;
+  @apply text-lg cursor-pointer;
+  padding-bottom: 0.1rem;
+  text-decoration: none;
+
+  &.active--exact {
+    &::after {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: rgba(255,20,147,0.2);
+      content: '';
+      opacity: 1;
+      transform: translateY(0px); 
+    }
+  }
+
+  &.no-underline {
+    &.active--exact { text-decoration: none; }
+
+    &::after {
+      opacity: 0;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: rgba(0,0,0,0.2);
+    content: '';
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+  }
+
+  &:hover::after,
+  &:focus::after {
+    opacity: 1;
+    transform: translateY(0px); 
+  }
+}
+
+ul { @apply list-inside; }
+
+.text-7xl {
+  font-size: 4.5rem;
+  @apply tracking-wide;
+}
+
+.display-sans {
+  font-family: 'Oswald', -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 600;
+}
+
+.display-serif {
+  font-family: 'Crimson Text', serif;
+}
+
+
+/* TODO - generative version */
+$pastel-sinebow: linear-gradient(to right, 
+  /* Orange */
+  #edd17e, #f2bd91, #feb4a1, 
+  /* Pink */
+  #fda6ae, #f79abe, #ed93cd, 
+  /* Purple */
+  #ce93ec,#bf9af6, #afa5fd, 
+  /* Blue */
+  #a2b3fe, #98c3fb, #92d3f3, 
+  /* Cyan */
+  /* #91e4e8, #95f0d9, #9df9ca,  */
+  #8bdce0, #8ee5ce, #95edc0, 
+  /* Green */
+  /* #a9feb9, #b8feaa, #c8f99d,  */
+  #9ae6a8, #a3e68e
+  /* Yellow */
+  /* #f0ffbd,  #d9f195, #e7e491); TOO LIGHT */
+  );
+
+.bg-gradient {
+  background: $pastel-sinebow;
+  background-blend-mode: darken;
+}
+
+.text-gradient {
+  background: $pastel-sinebow;
+  /* TODO: File bug w/ firefox - ff dev shows zip if blend mode for BG is turned on */
+  /* background-blend-mode: darken, darken, darken; */
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  /* TODO: Find a way to enable animation w/ acceptable performance */
+  /* -webkit-transform: translate3D(0, 0, 0); */
+  /* transform: translate3D(0, 0, 0); */
+  /* background-attachment: local, scroll; */
+}
+
+.gradient-headline {
+  @apply text-gradient font-bold;
+  @apply mt-0 pt-0 mb-3;
+}
+
+.border-gradient {
+  border-image: $pastel-sinebow;
+}
+
+.link-pretty {
+  background: #2b192a;
+  -webkit-text-fill-color: #2b192a;
+  background-clip: text;
+  /* transition-delay: 0.1s; */
+  /* transition: all 0.25s ease-out; */
+  /* transition: -webkit-text-fill-color 0.5s ease-in-out; */
+
+  &:hover {
+    text-decoration: none;
+    transition: all 0.15s ease-in;
+    background-color: pink;
+    background-image: $pastel-sinebow;
+    background-blend-mode: darken;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+/* Glass - SVG section divider */
+.divider-glass {
+  &.animated {
+    transform:  translate(295px, 115px);
+    /* TODO: Have the translucent waveforms move
+    /* <animateTransform 
+        attributeName="transform"
+        attributeType="XML"
+        type="translate"
+        from="0 0"
+        to="100% 0"
+        dur="10s"
+        repeatCount="indefinite"/> */
+  }
+
+  &.glass-up {
+    /* Glass graphic oriented up by default ¯\_(ツ)_/¯ */
+  }
+  
+  &.glass-down {
+    transform: scaleY(-1);
+    filter: FlipV;
+  }
+}
+
+/* Glass - Util for CSS Border (sized for <section> */
+.border-glass {
+  border-top:     2rem solid rgba(247, 250, 252, 0.55);
+  border-bottom:  2rem solid rgba(247, 250, 252, 0.55);
+  box-shadow:     inset 0 1.5rem 0 rgba(247, 250, 252, 0.25), 
+                  inset 0 -1.5rem 0 rgba(247, 250, 252, 0.25);
+}
+.border-t-glass {
+  border-top:     2rem solid rgba(247, 250, 252, 0.55);
+  box-shadow:     inset 0 1.5rem 0 rgba(247, 250, 252, 0.25);
+}
+.border-t-glass-thin {
+  border-top:     0.75rem solid rgba(247, 250, 252, 0.55);
+  box-shadow:     inset 0 0.5rem 0 rgba(247, 250, 252, 0.25);
+}
+.border-b-glass {
+  border-bottom:  2rem solid rgba(247, 250, 252, 0.55);
+  box-shadow:     inset 0 -1.5rem 0 rgba(247, 250, 252, 0.25);
+}
+.border-b-glass-thin {
+  border-bottom:  0.75rem solid rgba(247, 250, 252, 0.55);
+  box-shadow:     inset 0 -0.5rem 0 rgba(247, 250, 252, 0.25);
+}
+
+/* Skew - Util for css transform & clip path (transform TBD) */
+.bg-skew-up {
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+}
+.bg-skew-down {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.bg-rainbow {
+  $redGradient:     linear-gradient(217deg, rgba(255,0,0,0.7), rgba(255,0,0,0) 75%);
+  $greenGradient:   linear-gradient(127deg, rgba(0,255,0,0.6), rgba(0,255,0,0) 75%);
+  $blueGradient:    linear-gradient(336deg, rgba(0,0,255,0.7), rgba(0,0,255,0) 75%);
+
+  $rainbowGradient: $blueGradient, $redGradient, $greenGradient;
+
+  overflow: hidden;
+  position: relative;
+
+  &::before {
+    content: ' ';
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: pink;
+    background-image: $rainbowGradient;
+    background-size: 120% 120%;
+    background-position: bottom bottom;
+    will-change: transform; 
+    z-index: -1;
+  }
+
+  &.narrow::before {
+    background-size: 120% 10%;
+    background-position: top bottom;
+  }
+
+
+  /* &.bg-animated {
+    background-size: 200% 200%;
+    animation: bg-move 60s infinite;
+    will-change: background-position; 
+  } */
+}
+/* @keyframes bg-move {
+  0% {
+    background-position: 0% 100%;
+  }
+  25% {
+    background-position: 25% 75%;
+  }
+  50% {
+    background-position: 50% 50%;
+  }
+  75% {
+    background-position: 75% 25%;
+  }
+  100% {
+    background-position: 100% 0%;
+  }
+} */
+
+
+/* Section Styles TODO: move to base */
+section {
+  h2 { @apply text-white mb-5; }
+
+  .backdrop {
+    background: rgba(247, 250, 252, 0.65);
+    @apply rounded;
+  }
+}
+
+/* TODO: Move this to its own file/module */
+/* Custom card component */
+.card-grid {
+  @apply flex justify-around items-center;
+
+  .card {
+    height: 100%;
+    @apply relative max-w-xs px-4 overflow-hidden;
+    @apply rounded-lg cursor-pointer;
+  
+    /* Allows for title link to cover whole card */
+    h4 a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+    }
+  
+    .card-cover {
+      height: auto;
+      @apply w-full object-cover rounded-t-lg bg-gray-300;
+    }
+  
+    .card-tag-grid {
+      @apply bottom-0 mt-4 flex flex-wrap;
+  
+      .card-tag {
+        @apply inline-block px-2 py-1 mb-1 mr-1;
+        @apply bg-gray-200 rounded-full;
+        @apply text-xs font-semibold text-gray-700;
+      }
+    }
+  }
+}
+
+
+/* ---- HOME PAGE ---- */
+.page-home {
+  /* animation: bg-move 10s infinite; */
+  /* will-change: background-position; */ 
+}
+/* BG animation after we've figured everything else out */
+/* @keyframes bg-move {
+  0%, 100% {
+    background-position: 0% 0%;
+  }
+  25% {
+    background-position: 50% 50%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 50% 50%;
+  }
+} */

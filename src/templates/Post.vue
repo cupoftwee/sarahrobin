@@ -160,6 +160,10 @@
       border: 1px solid gainsboro;
       border-radius: 3px;
     }
+    a {
+      @include nav-link;
+      color: palevioletred;
+    }
   }
 </style>
 

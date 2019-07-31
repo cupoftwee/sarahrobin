@@ -1,10 +1,14 @@
 <template>
   <li class="card">
-    <g-image class="card-cover" :src="post.cover" :alt="post.title" />
+    <g-image 
+      class="card-cover" 
+      :src="post.cover" 
+      :alt="post.title" 
+    />
     
     <div class="bg-white px-6 py-3 rounded-b-lg">
       <h4 class="font-bold text-xl mb-2">
-        <g-link :to="`${post.path}/`" class="nav-link">
+        <g-link :to="`${post.path}/`" class="">
           {{ post.title }}
         </g-link>
       </h4>

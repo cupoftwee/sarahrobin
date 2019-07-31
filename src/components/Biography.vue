@@ -22,7 +22,7 @@
           </g-link>
         </div>
 
-        <p v-if="!teaser" class="font-light text-lg lg:xl px-4 mt-10">
+        <p v-if="!teaser" class="font-light text-lg lg:text-2xl px-4 mt-10">
           <span class="font-bold">For development</span>, 
           
           I usually work w/ a varied Javascript stack for rapid prototyping 
@@ -34,20 +34,20 @@
           </a>
         </p>
 
-        <p v-if="!teaser" class="font-light text-lg lg:text-xl mt-10 px-4">
+        <p v-if="!teaser" class="font-light text-lg lg:text-2xl mt-10 px-4">
           <span class="font-bold">For design</span>, 
-          I try to practice an emspathetic approach to product dev and UX that 
+          I try to practice an empathetic approach to product dev and UX that 
           enables responsible growth. Design isn't only how it works, but also 
-          who it works for. You can see my design work<a href="http://dribbble.com/cupoftwee" target="_blank" class="font-bold text-lg lg:text-xl  link-pretty">
+          who it works for. You can see my design work<a href="http://dribbble.com/cupoftwee" target="_blank" class="font-bold text-lg lg:text-xl nav-link link-pretty">
           on Dribbble &#8594;</a>
         </p>
 
-        <p v-if="!teaser" class="font-light text-lg lg:text-xl mt-10 px-4">
+        <p v-if="!teaser" class="font-light text-lg lg:text-2xl mt-10 px-4">
           <span class="font-bold">For art</span>, 
           I tend to work in CSS, Canvas, and SVG. My current passion is to 
           program simulated life forms that scurry about, spilling pixels all 
           over the canvas in frantic and beautiful ways. You can find my spilled 
-          pixels (and other artistic endeavors) <a href="https://glitch.com/@cupoftwee" target="_blank" class="font-bold text-lg lg:text-xl link-pretty">
+          pixels (and other artistic endeavors) <a href="https://glitch.com/@cupoftwee" target="_blank" class="font-bold text-lg lg:text-xl nav-link link-pretty">
           on Glitch &#8594;</a>
         </p>
       </div>
@@ -56,14 +56,14 @@
 </template>
 
 <script>
-export default {
-  props: {
-    teaser: {
-      type: Boolean,
-      default: false
+  export default {
+    props: {
+      teaser: {
+        type: Boolean,
+        default: false
+      }
     }
   }
-}
 </script>
 
 <style>

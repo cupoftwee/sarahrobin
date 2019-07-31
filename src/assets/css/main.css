@@ -322,7 +322,7 @@ section {
     }
   
     .card-cover {
-      height: auto;
+      height: 11rem;
       @apply w-full object-cover rounded-t-lg bg-gray-300;
     }
   

@@ -1,6 +1,7 @@
 # `sarahrobin.dev`
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f0483063-914f-4b26-b126-2cbb3ec81c95/deploy-status)](https://app.netlify.com/sites/keen-lovelace/deploys)
 
-My professional services website and blog.
+My professional services website and blog! 
 
 
 ### How to install and run the site
@@ -11,7 +12,7 @@ My professional services website and blog.
 5. `$ yarn build` - Compile for production to `/dist` folder.
 
 
-### This project built with
+### This project was built with
 * [Vue.js](https://vuejs.org/) - JS Framework
 * [Tailwindcss](https://tailwindcss.com/) - PostCSS/UI Framework
 * [Gridsome](https://gridsome.org/) - Vue-based, modular static site generation tool
@@ -24,4 +25,4 @@ Working in (F)OSS means that you spend every day standing on the shoulders of gi
 
 Cosmin's choice of theme inspiration as well, the [Attila](https://github.com/zutrinken/attila) Ghost theme, is a beautiful and solid foundation to build off of, and I am very grateful for their work 💖
 
-Additionally, I have to make special note that this project could not have happened without the support of my wonderful and loving fiance along my friends who helped me push past an artistic block that had been clogging my heart for years. I'll spare this `README` the real sappy stuff, but if you're interested, I wrote about this process of this project further [in this blog post](https://sarahrobin.dev/writing/hello-world-portfolio-pt-1/).
+Additionally, I have to make special note that this project could not have happened without the support of my wonderful and loving fiance and my friends (esp. the [Vue Vixens](https://vuevixens.org/)) who helped me push past an artistic block that had been clogging my heart for years. I'll spare this `README` the real sappy stuff, but if you're interested, I wrote about this process of this project further [in this blog post](https://sarahrobin.dev/writing/hello-world-portfolio-pt-1/).

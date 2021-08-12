@@ -34,7 +34,7 @@
 
       <Divider direction="down" />
 
-      <RecentWork :posts="{}" />
+      <RecentWork :articles="articles" />
   </div>
 </template>
 
@@ -55,13 +55,15 @@ export default {
     RecentWork
   },
 
-  metaInfo () {
-    return {
-      title: this.config.siteName,
-    }
-  },
+  async asyncData({ $content, params: { slug } }) {
+    const articles = await $content('articles')
+      .where({ tags: { $containsAny: 'portfolio' } })
+      .only(['cover', 'title', 'description','slug', 'author'])
+      .sortBy('createdAt', 'asc')
+      .fetch()
 
-  computed: { },
+    return { articles }
+  }
 }
 </script>
 

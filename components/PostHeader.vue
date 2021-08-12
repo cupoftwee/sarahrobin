@@ -63,7 +63,7 @@
             <NuxtLink
               v-for="tag in post.tags"
               :key="tag"
-              :to="`${tag}/`"
+              :to="`/tag/${tag}/`"
               class="text-white hover:bg-pink-400 hover:bg-white hover:text-white hover:border-white border-2 border-white-400 font-sans font-bold text-xs sm:text-sm px-4 py-2 mr-4 mb-2 rounded-full transition-color transition-bg"
             >
               <svg class="inline w-3 fill-current align-middle mr-1" viewBox="0 0 20 20" role="img" xmlns="http://www.w3.org/2000/svg">

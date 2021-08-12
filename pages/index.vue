@@ -1,5 +1,5 @@
 <template>
-  <DefaultLayout hideNav class="page-home bg-rainbow">
+  <div class="page-home bg-rainbow">
       <section class="page-home-splash b-glass container">
         <div class="splash-title">
           <h1 class="title-logotype display-sans sm:mt-12 md:mt-24 lg:mt-32">
@@ -35,7 +35,7 @@
       <Divider direction="down" />
 
       <RecentWork :posts="{}" />
-  </DefaultLayout>
+  </div>
 </template>
 
 <script>

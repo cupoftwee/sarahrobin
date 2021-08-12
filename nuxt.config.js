@@ -38,9 +38,13 @@ export default {
     '@nuxtjs/tailwindcss',
 
     ['@nuxtjs/google-fonts', {
-      'Crimson+Text':{ ital: [600]},
-      Oswald: [600],
-      'Fira+Sans': [200, 300, 400, 600, 700]
+      download: true,
+      inject: true,
+      families: {
+        'Crimson+Text':{ ital: [600]},
+        Oswald: { wght: [600] },
+        'Fira+Sans': [200, 300, 400, 600, 700]
+      }
     }]
   ],
 

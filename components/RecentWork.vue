@@ -25,8 +25,8 @@
     components: { Card },
     props: {
       articles: {
-        type: Object,
-        default: {}
+        type: Array,
+        default: []
       }
     }
   }

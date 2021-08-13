@@ -11,7 +11,7 @@
 
       <div>
         <p class="font-light text-lg mb-14 px-4 leading-normal md:font-thin md:text-2xl md:px-0">
-          I work mostly as a web developer, but I occasionally chip in as a UI/UX engineer, and product manager. I like to wear many hats and learn a breadth of skills around my primary focus: Making accessible, sustainable, &amp; inclusive software.
+          I'm an experienced web developer who's been working in the industry for the better part of the last decade, first as a web designer and UX engineer, but mostly as a frontend developer and full-stack engineer.
         </p>
 
         <div v-if="teaser" class="mt-12 flex justify-end">

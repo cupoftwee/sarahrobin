@@ -51,7 +51,9 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     '@nuxt/content',
-    '@nuxtjs/sitemap'
+    ['@nuxtjs/sitemap', {
+      hostname: 'http://sarahrobin.dev/'
+    }]
   ],
 
   hooks: {

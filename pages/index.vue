@@ -7,7 +7,7 @@
           </h1>
 
           <h2 class="title-subtitle text-5xl">
-            Design &amp; Engineering
+            Web Development
           </h2>
         </div>
 

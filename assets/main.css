@@ -230,13 +230,45 @@ $pastel-sinebow: linear-gradient(to right,
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 
+  /* Orange
+    #edd17e: 237, 209, 126
+    #f2bd91: 242, 189, 145
+    #feb4a1: 254, 180, 161
+  */
+  /* Pink
+    #fda6ae: 253, 166, 174
+    #f79abe: 247, 154, 190
+    #ed93cd: 237, 147, 205
+  */
+  /* Purple
+    #ce93ec: 206, 147, 236
+    #bf9af6: 191, 154, 246
+    #afa5fd: 175, 165, 253
+  */
+  /* Blue
+    #a2b3fe: 162, 179, 254
+    #98c3fb: 152, 195, 251
+    #92d3f3: 146, 211, 243
+  */
+  /* Cyan
+    #91e4e8:  145, 228, 232
+    #95f0d9:  149, 240, 217
+    #9df9ca:  157, 249, 202
+  */
+  /* Green
+    #a9feb9: 169, 254, 185
+    #b8feaa: 184, 254, 170
+    #c8f99d: 200, 249, 157
+  */
+$redGradient:     linear-gradient(217deg, rgba(250,10,10,0.7), rgba(255,10,10,0) 75%);
+$greenGradient:   linear-gradient(127deg, rgba(30,225,10,0.6), rgba(0,225,10,0) 75%);
+$blueGradient:    linear-gradient(336deg, rgba(10,10,255,0.7), rgba(10,10,255,0) 75%);
+
+
+$rainbowGradient: $blueGradient, $redGradient, $greenGradient;
+
+
 .bg-rainbow {
-  $redGradient:     linear-gradient(217deg, rgba(255,0,0,0.7), rgba(255,0,0,0) 75%);
-  $greenGradient:   linear-gradient(127deg, rgba(0,255,0,0.6), rgba(0,255,0,0) 75%);
-  $blueGradient:    linear-gradient(336deg, rgba(0,0,255,0.7), rgba(0,0,255,0) 75%);
-
-  $rainbowGradient: $blueGradient, $redGradient, $greenGradient;
-
   overflow: hidden;
   position: relative;
 
@@ -256,9 +288,10 @@ $pastel-sinebow: linear-gradient(to right,
   }
 
   &.narrow::before {
-    background-size: 120% 10%;
-    background-position: top bottom;
+    background-size: 130% 50%;
+    background-position: right top;
   }
+
 
 
   /* &.bg-animated {
@@ -266,6 +299,22 @@ $pastel-sinebow: linear-gradient(to right,
     animation: bg-move 60s infinite;
     will-change: background-position;
   } */
+}
+
+.rainbow-rule {
+  display: block;
+  width: 100%;
+  height: 3px;
+  border-radius: 100%;
+  background-color: pink;
+  background-image: $pastel-sinebow;
+  background-blend-mode: darken;
+  opacity: 0.85;
+
+  &.rainbow-break {
+    width: 35%;
+    margin: 2rem auto 4rem;
+  }
 }
 /* @keyframes bg-move {
   0% {

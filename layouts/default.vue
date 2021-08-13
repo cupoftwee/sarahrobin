@@ -3,7 +3,7 @@
     <NavMenu
       v-if="!hideNav"
       :title="title"
-      mode="sinebow"
+      mode="rainbow"
       :glassBorderB="glassBorderB"
       :glassBorderT="glassBorderT"
     />

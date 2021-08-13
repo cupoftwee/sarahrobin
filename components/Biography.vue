@@ -11,9 +11,7 @@
 
       <div>
         <p class="font-light text-lg mb-14 px-4 leading-normal md:font-thin md:text-3xl md:px-0">
-          I also work as a web and mobile developer, UI/UX designer, and product
-          manager. I like to wear many hats and learn a breadth of skills around my
-          primary focus: Making accessible, sustainable, &amp; inclusive software.
+          I work mostly as a web developer, but I occasionally chip in as a UI/UX engineer, and product manager. I like to wear many hats and learn a breadth of skills around my primary focus: Making accessible, sustainable, &amp; inclusive software.
         </p>
 
         <div v-if="teaser" class="mt-12 flex justify-end">
@@ -36,7 +34,7 @@
 
         <p v-if="!teaser" class="font-light text-lg lg:text-2xl mt-10 px-4">
           <span class="font-bold">For design</span>,
-          I try to practice an empathetic approach to product dev and UX that
+          I try to practice an inclusive approach to product dev and UX that
           enables responsible growth. Design isn't only how it works, but also
           who it works for. You can see my design work<a href="http://dribbble.com/cupoftwee" target="_blank" class="font-bold text-lg lg:text-xl nav-link link-pretty">
           on Dribbble &#8594;</a>

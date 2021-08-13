@@ -1,5 +1,5 @@
 <template>
-  <nav :class="{ ...bgClasses, ...borderClasses }" class="flex items-center justify-between flex-wrap p-6 lg:px-20">
+  <nav :class="{ ...bgClasses, ...borderClasses }" class="narrow flex items-center justify-between flex-wrap p-6 lg:px-20 border-b-glass-thin">
     <div class="flex items-center flex-shrink-0 mr-6">
       <h1 :class="textColorClasses" class="font-light text-left">
         <NuxtLink to="/" class="s no-underline text-2xl mb-0">
@@ -69,8 +69,8 @@ export default {
       default: 'opaque'
     },
 
-    glassBorderB: Boolean,
-    glassBorderT: Boolean
+    glassBorderB: { type: Boolean, default: true },
+    glassBorderT: { type: Boolean, default: true },
   },
 
   data() {
@@ -82,8 +82,8 @@ export default {
   computed: {
     bgClasses() {
       return {
-        'border-t-glass-thin': this.glassBorderT,
-        'border-b-glass-thin': this.glassBorderB,
+        'border-t-glass': this.glassBorderT,
+        'border-b-glass': this.glassBorderB,
         'bg-transparent': this.mode === 'glass',
         'bg-gradient': this.mode === 'sinebow',
         'bg-rainbow': this.mode === 'rainbow',

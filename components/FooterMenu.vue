@@ -2,8 +2,8 @@
   <footer class="footer-menu bg-white border-t-glass p-10 md:p-16">
     <div class="w-full text-center md:text-left md:w-1/2 mb-4">
       <NuxtLink to="/" class="footer-logo link-pretty">
-        <span class="font-bold">Sarah Robin </span> |
-        Design &amp; Engineering
+        <span class="font-bold">Sarah Robin </span> <br />
+        Web Development
       </NuxtLink>
     </div>
 
@@ -53,8 +53,8 @@
 
       <p class="text-center text-sm md:text-right">
         Built with
-        <a href="https://gridsome.org" target="_blank" class="link-pretty text-sm font-bold">
-          Gridsome
+        <a href="http://nuxtjs.org" target="_blank" class="link-pretty text-sm font-bold">
+          Nuxt.js
         </a>
         &amp;
         <a href="https://tailwindcss.com/" target="_blank" class="link-pretty text-sm font-bold">

@@ -1,8 +1,8 @@
 <template>
-  <section class="recent-work bg-glass border-b-glass px-12 md:px-32 pb-24">
+  <section class="recent-work bg-glass border-b-glass px-12 md:px-24 pb-24">
     <h2 class="flex justify-between items-center">
       <span class="text-4xl">
-        Recent Work
+        Recent {{ title }}
       </span>
     </h2>
 
@@ -27,6 +27,10 @@
       articles: {
         type: Array,
         default: []
+      },
+      title: {
+        type: String,
+        default: 'Content'
       }
     }
   }

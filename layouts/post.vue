@@ -4,8 +4,8 @@
       v-if="!hideNav"
       :title="title"
       mode="glass"
-      :glassBorderB="glassBorderB"
-      :glassBorderT="glassBorderT"
+      :glassBorderB="false"
+      :glassBorderT="false"
     />
 
     <main role="main">

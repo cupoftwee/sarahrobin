@@ -1,5 +1,5 @@
 ---
-title: "The character of a computer"
+title: "The Character of a Computer"
 description: "Idle thoughts on the shared personhood of machines"
 date: 2019-02-27 17:54:43
 author: 'Sarah Robin'

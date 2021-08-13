@@ -34,7 +34,7 @@
 
       <Divider direction="down" />
 
-      <RecentWork :articles="articles" />
+      <RecentContent :articles="articles" title="Writing" />
   </div>
 </template>
 
@@ -43,7 +43,7 @@ import PostItem from '@/components/PostItem'
 import NavMenu from '@/components/NavMenu'
 import BriefBio from '@/components/Biography'
 import Divider from '@/components/Divider'
-import RecentWork from '@/components/RecentWork'
+import RecentContent from '@/components/RecentContent'
 
 export default {
   layout: "home",
@@ -52,7 +52,7 @@ export default {
     NavMenu,
     BriefBio,
     Divider,
-    RecentWork
+    RecentContent
   },
 
   async asyncData({ $content, params: { slug } }) {

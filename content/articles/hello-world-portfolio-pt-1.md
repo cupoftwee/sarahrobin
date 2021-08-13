@@ -1,10 +1,10 @@
 ---
-title: "Hello World, Pt 1"
+title: "Hello, World"
 description: "The portfolio that took over 5 years to make, but 1 week to code"
 slug: "hello-world-portfolio-pt-1"
 date: 2019-07-29 17:54:43
 author: 'Sarah Robin'
-tags: ['portfolio', 'personal']
+tags: ['personal']
 cover: /images/posts/sailing-with-samantha-2019.webp
 ---
 

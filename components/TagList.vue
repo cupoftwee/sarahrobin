@@ -1,5 +1,5 @@
 <template>
-  <section v-if="tags.length > 0" class="width-screen">
+  <section v-if="tags.length > 0" class="width-screen flex flex-wrap content-center">
     <NuxtLink
       v-for="tag in tags"
       :key="tag"

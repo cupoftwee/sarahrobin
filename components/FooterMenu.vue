@@ -18,7 +18,7 @@
           </li>
 
           <li class="px-2 mb-0">
-            <NuxtLink to="about" class="footer-link nav-link link-pretty hover:text-blue-400">
+            <NuxtLink to="/about" class="footer-link nav-link link-pretty hover:text-blue-400">
               <fa-icon icon="laptop-code" />
               About
             </NuxtLink>
@@ -27,7 +27,7 @@
           <li class="break mb-6 visible md:hidden"></li>
 
           <li class="pl-2 mb-0">
-            <NuxtLink to="work" class="footer-link nav-link link-pretty hover:text-purple-400">
+            <NuxtLink to="/work" class="footer-link nav-link link-pretty hover:text-purple-400">
               <fa-icon icon="feather" />
               Work
             </NuxtLink>
@@ -36,7 +36,7 @@
           <li class="break mb-6 visible md:hidden"></li>
 
           <li class="pl-2 mb-0">
-            <NuxtLink to="writing" class="footer-link nav-link link-pretty hover:text-purple-400">
+            <NuxtLink to="/writing" class="footer-link nav-link link-pretty hover:text-purple-400">
               <fa-icon icon="feather" />
               Writing
             </NuxtLink>

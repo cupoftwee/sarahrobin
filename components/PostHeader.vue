@@ -57,7 +57,7 @@
             {{ post.readingTime }}
           </p>
 
-          <TagList v-if="post.tags || tags" :tags="post.tags" />
+          <TagList light v-if="post.tags || tags" :tags="post.tags" />
 
         </div>
 

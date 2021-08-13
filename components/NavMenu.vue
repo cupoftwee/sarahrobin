@@ -1,5 +1,5 @@
 <template>
-  <nav :class="{ ...bgClasses, ...borderClasses }" class="narrow flex items-center justify-between flex-wrap p-6 lg:px-20 border-b-glass-thin">
+  <nav :class="{ ...bgClasses, ...borderClasses }" class="narrow flex items-center justify-between flex-wrap p-6 lg:px-20">
     <div class="flex items-center flex-shrink-0 mr-6">
       <h1 :class="textColorClasses" class="font-light text-left">
         <NuxtLink to="/" class="s no-underline text-2xl mb-0">
@@ -30,12 +30,12 @@
           Home
         </NuxtLink>
 
-        <NuxtLink to="about" class="nav-link block text-white font-bold mt-4 mr-4 hover:no-underline lg:inline-block lg:mt-0">
+        <NuxtLink to="/about" class="nav-link block text-white font-bold mt-4 mr-4 hover:no-underline lg:inline-block lg:mt-0">
           <fa-icon icon="book-dead" class="" />
           About
         </NuxtLink>
 
-        <NuxtLink to="work" class="nav-link block text-white font-bold mr-4 mt-4 hover:no-underline hover:text-indigo-500 lg:inline-block lg:mt-0">
+        <NuxtLink to="/work" class="nav-link block text-white font-bold mr-4 mt-4 hover:no-underline lg:inline-block lg:mt-0">
           <fa-icon icon="laptop-code" class="" />
           Work
         </NuxtLink>
@@ -82,8 +82,8 @@ export default {
   computed: {
     bgClasses() {
       return {
-        'border-t-glass': this.glassBorderT,
-        'border-b-glass': this.glassBorderB,
+        'border-t-glass-thin': this.glassBorderT,
+        'border-b-glass-thin': this.glassBorderB,
         'bg-transparent': this.mode === 'glass',
         'bg-gradient': this.mode === 'sinebow',
         'bg-rainbow': this.mode === 'rainbow',

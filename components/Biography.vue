@@ -1,6 +1,6 @@
 <template>
-  <section class="home-about flex justify-around bg-white sm:mt-12 md:mt-0 sm:px-12 md:px-32 sm:py-12 md:py-24">
-    <div class="about-bio max-w-sm p-6 lg:px-0 lg:max-w-3xl">
+  <section class="home-about flex justify-around bg-white md:mt-0 sm:px-12 md:px-32 sm:py-12 md:py-24">
+    <div class="about-bio max-w-xl p-6 lg:px-0 lg:max-w-3xl">
       <p id="about" class="bio-intro text-3xl font-thin mt-0 mb-0 ml-0 text-center md:text-left">
         Hi! My name's Sarah and
       </p>

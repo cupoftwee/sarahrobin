@@ -35,8 +35,6 @@
 
 <script>
 import SiteFooter from '@/components/FooterMenu'
-import PostItem from '@/components/PostItem'
-import Pagination from '@/components/Pagination'
 import NavMenu from '@/components/NavMenu'
 import Divider from '@/components/Divider'
 import TagList from '@/components/TagList'
@@ -46,7 +44,6 @@ export default {
   layout: "post",
   components: {
     PostHeader,
-    Pagination,
     SiteFooter,
     NavMenu,
     Divider,

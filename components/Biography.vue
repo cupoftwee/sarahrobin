@@ -10,7 +10,7 @@
       </h2>
 
       <div>
-        <p class="font-light text-lg mb-14 px-4 leading-normal md:font-thin md:text-3xl md:px-0">
+        <p class="font-light text-lg mb-14 px-4 leading-normal md:font-thin md:text-2xl md:px-0">
           I work mostly as a web developer, but I occasionally chip in as a UI/UX engineer, and product manager. I like to wear many hats and learn a breadth of skills around my primary focus: Making accessible, sustainable, &amp; inclusive software.
         </p>
 
@@ -20,35 +20,51 @@
           </NuxtLink>
         </div>
 
-        <p v-if="!teaser" class="font-light text-lg lg:text-2xl px-4 mt-10">
-          <span class="font-bold">For development</span>,
 
+
+        <p v-if="!teaser" class="font-light text-md xl:text-lg px-4 mt-10">
+          <span class="font-bold">For development</span>,
           I usually work w/ a varied Javascript stack for rapid prototyping
           and larger, full-stack projects. I also tinker in Phoenix, Ruby,
-          and I'm learning Rust.
-
-          You can find my code <a href="http://github.com/cupoftwee" target="_blank" class="font-bold text-lg lg:xl  link-pretty">
+          and I'm learning Rust. <br />
+          You can find my code <a href="http://github.com/cupoftwee" target="_blank" class="font-bold text-md lg:text-lg  link-pretty">
           on Github &#8594;</a>
           </a>
         </p>
 
-        <p v-if="!teaser" class="font-light text-lg lg:text-2xl mt-10 px-4">
-          <span class="font-bold">For design</span>,
-          I try to practice an inclusive approach to product dev and UX that
-          enables responsible growth. Design isn't only how it works, but also
-          who it works for. You can see my design work<a href="http://dribbble.com/cupoftwee" target="_blank" class="font-bold text-lg lg:text-xl nav-link link-pretty">
-          on Dribbble &#8594;</a>
-        </p>
-
-        <p v-if="!teaser" class="font-light text-lg lg:text-2xl mt-10 px-4">
-          <span class="font-bold">For art</span>,
+        <p v-if="!teaser" class="font-light text-md lg:text-lg mt-10 px-4">
+          <span class="font-bold">For art &amp; design</span>,
           I tend to work in CSS, Canvas, and SVG. My current passion is to
           program simulated life forms that scurry about, spilling pixels all
-          over the canvas in frantic and beautiful ways. You can find my spilled
-          pixels (and other artistic endeavors) <a href="https://glitch.com/@cupoftwee" target="_blank" class="font-bold text-lg lg:text-xl nav-link link-pretty">
-          on Glitch &#8594;</a>
+          over the canvas in frantic and beautiful ways. <br />
+
+          You can find my artistic endeavors <a href="http://dribbble.com/cupoftwee" target="_blank" class="font-bold text-md lg:text-lg nav-link link-pretty">
+          on Dribbble &#8594;</a>
         </p>
       </div>
+
+      <hr v-if="!teaser" class="rainbow-rule rainbow-break" />
+
+      <div v-if="!teaser" class="bio-details flex flex-col-reverse md:flex-row">
+        <div class="bio-photo max-w-lg lg:max-w-xl pr-6 xl:pr-12 ">
+          <br />
+          <img class="rounded-max" src="/images/author/profile-08-2021.jpg" />
+
+          <p class="bio-pronouns">(She/They)</p>
+        </div>
+
+        <div class="bio-personal font-light ">
+          <h3 class="text-center mb-2">Personal Life</h3>
+          <p>
+            Outside of work, I spend my time making art (ranging from model kits to watercolors to generative css experiments), cooking up a storm, and being entirely too finicky about tea. As well, I'm a devoted gardener and loving plant mom - I will send pictures of my garden if provoked!
+          </p>
+          <p>
+            I also enjoy hiking, I'm learning to climb, and I enjoy a veritable bevvy of nerdy pasttimes. Feel free to ask me about them, if you would like an improvised essay on the spot!
+          </p>
+        </div>
+      </div>
+
+
     </div>
   </section>
 </template>
@@ -65,7 +81,16 @@
 </script>
 
 <style>
+  .bio-details img {
+    border-radius: 100px;
+    border: 6px solid gainsboro;
+    margin: 12px;
+  }
   .bio-intro {
     text-shadow: 2px 2px 3px rgba(255,255,255,0.1);
+  }
+  .bio-pronouns {
+    text-align: center;
+    font-weight: bold;
   }
 </style>

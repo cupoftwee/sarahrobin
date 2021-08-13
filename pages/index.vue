@@ -57,7 +57,6 @@
 </template>
 
 <script>
-import PostItem from '@/components/PostItem'
 import NavMenu from '@/components/NavMenu'
 import BriefBio from '@/components/Biography'
 import Divider from '@/components/Divider'
@@ -67,7 +66,6 @@ import ContentCard from '~/components/ContentCard.vue'
 export default {
   layout: "home",
   components: {
-    PostItem,
     NavMenu,
     BriefBio,
     Divider,

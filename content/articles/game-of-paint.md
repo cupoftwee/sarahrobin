@@ -1,6 +1,7 @@
 ---
 title: "Conway's Game of Paint"
 description: "Remaking my favorite twitter bot as art therapy"
+teaser: "Conway's Game of Life is quite cool, but not exactly new. Since its inception, its been implemented in almost every way conceivable. What I chose to do, for unfathomable reasons, was build Conway's Game of Life in CSS using Box Shadow"
 slug: "game-of-paint"
 date: 2019-05-10 17:54:43
 author: 'Sarah Robin'

@@ -1,6 +1,7 @@
 ---
 title: "The Character of a Computer"
 description: "Idle thoughts on the shared personhood of machines"
+teaser: "The other day, waiting for either automated tests and/or creeping existential crisis to pass, I found myself thinking about how we, as humans, percieve and interact with computers. My coworker was fuming about the state of some code, and I sympathized and ended up telling him that the poor thing was trying its best, he should go easy on it."
 date: 2019-02-27 17:54:43
 author: 'Sarah Robin'
 tags: ['idle-thoughts', 'HCI', 'personhood', 'portfolio']

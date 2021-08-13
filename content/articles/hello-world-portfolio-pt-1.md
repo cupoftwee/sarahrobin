@@ -1,6 +1,7 @@
 ---
 title: "Hello, World"
 description: "The portfolio that took over 5 years to make, but 1 week to code"
+teaser: "The portfolio that took over 5 years to make, but 1 week to code - this is the story of how I made it this far."
 slug: "hello-world-portfolio-pt-1"
 date: 2019-07-29 17:54:43
 author: 'Sarah Robin'
@@ -79,7 +80,7 @@ I say goodbye to everything and everyone again. There's no party this time. We l
 
 I have a name now - it isn't that I didn't have one before, but my deadname felt more like a SKU or UUID than an identity to me. It wasn't me. It was just the sticker that my parents put on my blisterwrap.
 
-My name's Sarah by the way (she/her pronouns), thank you for reading this far. It really does mean a bunch to me 💖
+My name's Sarah by the way (she/they pronouns), thank you for reading this far. It really does mean a bunch to me 💖
 
 Its not all roses - I've managed to survive the hazards of transition so far, though just barely at points. Every few months, there's a new existential threat that threatens the financial, medical, or legal safety of myself or my loved ones. 
 

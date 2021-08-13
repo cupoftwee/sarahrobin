@@ -36,7 +36,7 @@
     </div> -->
 
     <!-- non-cover image markup -->
-    <div class="pt-24 border-b-glass-thin">
+    <div class="pt-4 md:pt-24 border-b-glass-thin">
       <div class="max-w-xl md:max-w-3xl xl:max-w-4xl mx-auto text-center px-6">
         <h1 v-if="post.title || title" class="text-white text-4xl lg:text-6xl leading-tight font-sans font-bold mb-2">
           {{ post.title }}
@@ -46,7 +46,7 @@
           {{ post.description }}
         </p>
 
-        <div class="font-bold flex text-center justify-center content-around items-baseline w-full m0-8  mb-6">
+        <div class="font-bold flex flex-wrap flex-row-reverse md:flex-row text-center justify-center content-around items-baseline w-full m0-8  mb-6">
           <p v-if="post.date || date" class="pr-4">
             <time :datetime="post.date" class="capitalize text-white text-base">
               {{ formattedPublishDate }}
@@ -56,8 +56,6 @@
           <p v-if="post.readingTime || readingTime" class="text-white text-base pr-4">
             {{ post.readingTime }}
           </p>
-
-          <p class="break mb-6 visible md:hidden"></p>
 
           <TagList v-if="post.tags || tags" :tags="post.tags" />
 

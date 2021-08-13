@@ -34,11 +34,11 @@
           <fa-icon icon="book-dead" class="" />
           About
         </NuxtLink>
-
+<!--
         <NuxtLink to="/work" class="nav-link block text-white font-bold mr-4 mt-4 hover:no-underline lg:inline-block lg:mt-0">
           <fa-icon icon="laptop-code" class="" />
           Work
-        </NuxtLink>
+        </NuxtLink> -->
 
         <NuxtLink to="/writing" class="nav-link block font-bold text-white mt-4 mr-4 hover:no-underline lg:inline-block lg:mt-0">
           <fa-icon icon="feather" class="" />

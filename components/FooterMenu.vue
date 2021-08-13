@@ -25,7 +25,7 @@
           </li>
 
           <li class="break mb-6 visible md:hidden"></li>
-
+<!--
           <li class="pl-2 mb-0">
             <NuxtLink to="/work" class="footer-link nav-link link-pretty hover:text-purple-400">
               <fa-icon icon="feather" />
@@ -33,7 +33,7 @@
             </NuxtLink>
           </li>
 
-          <li class="break mb-6 visible md:hidden"></li>
+          <li class="break mb-6 visible md:hidden"></li> -->
 
           <li class="pl-2 mb-0">
             <NuxtLink to="/writing" class="footer-link nav-link link-pretty hover:text-purple-400">

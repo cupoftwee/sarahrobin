@@ -6,13 +6,12 @@
       </span>
     </h2>
 
-    <ul class="card-grid mt-16 flex-col md:flex-row">
+    <ul class="grid grid-rows-auto grid-cols-2 gap-12 lg:grid-cols-3 xl:grid-cols-4 grid-flow-row mt-16 flex-col md:flex-row flex-wrap">
       <!-- TODO: This naming scheme is non-intuitive -->
       <Card
         v-for="article in articles"
         :key="article.slug"
         :post="article"
-        class="card"
       />
     </ul>
   </section>

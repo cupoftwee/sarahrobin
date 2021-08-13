@@ -78,7 +78,8 @@ export default {
   async asyncData({ $content, params: { slug } }) {
     const articles = await $content('articles')
       .where({ tags: { $containsAny: 'portfolio' } })
-      .only(['cover', 'title', 'description', 'slug', 'author'])
+      .only(['cover', 'title', 'description', 'slug', 'author', 'tags'])
+      .limit(5)
       .sortBy('createdAt', 'asc')
       .fetch()
 

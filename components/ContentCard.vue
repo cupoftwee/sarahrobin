@@ -1,5 +1,5 @@
 <template>
-  <li class="content-card card">
+  <li class="content-card">
     <a :href="content.url">
       <img
         class="card-cover"
@@ -38,7 +38,7 @@
   }
 </script>
 <style>
-  .content-card.card {
+  .content-card {
     .card-cover {
       padding: 1rem;
       background: whitesmoke;

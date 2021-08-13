@@ -292,8 +292,8 @@ $rainbowGradient: $blueGradient, $redGradient, $greenGradient;
     background-position: right top;
   }
 
-  &.medium::before {
-    background-size: 130% 70%;
+  &.narrow::before {
+    background-size: 130% 50%;
     background-position: right top;
   }
 
@@ -354,37 +354,6 @@ section {
 /* Custom card component */
 .card-grid {
   @apply flex justify-around items-center;
-
-  .card {
-    height: 100%;
-    @apply relative max-w-xs px-4 overflow-hidden;
-    @apply rounded-lg cursor-pointer;
-
-    /* Allows for title link to cover whole card */
-    h4 a::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 0;
-      right: 0;
-      bottom: 0;
-    }
-
-    .card-cover {
-      height: 11rem;
-      @apply w-full object-cover rounded-t-lg bg-gray-300;
-    }
-
-    .card-tag-grid {
-      @apply bottom-0 mt-4 flex flex-wrap;
-
-      .card-tag {
-        @apply inline-block px-2 py-1 mb-1 mr-1;
-        @apply bg-gray-200 rounded-full;
-        @apply text-xs font-semibold text-gray-700;
-      }
-    }
-  }
 }
 
 

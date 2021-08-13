@@ -292,6 +292,11 @@ $rainbowGradient: $blueGradient, $redGradient, $greenGradient;
     background-position: right top;
   }
 
+  &.medium::before {
+    background-size: 130% 70%;
+    background-position: right top;
+  }
+
 
 
   /* &.bg-animated {

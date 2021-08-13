@@ -38,41 +38,28 @@
     <!-- non-cover image markup -->
     <div class="pt-24 border-b-glass-thin">
       <div class="max-w-xl md:max-w-3xl xl:max-w-4xl mx-auto text-center px-6">
-        <h1 class="text-white text-4xl lg:text-6xl leading-tight font-sans font-bold mb-2">
+        <h1 v-if="post.title || title" class="text-white text-4xl lg:text-6xl leading-tight font-sans font-bold mb-2">
           {{ post.title }}
         </h1>
 
-        <p class="text-white max-w-xl mx-auto text-lg md:text-xl">
+        <p v-if="post.description || description" class="text-white max-w-xl mx-auto text-lg md:text-xl">
           {{ post.description }}
         </p>
 
         <div class="font-bold flex text-center justify-center content-around items-baseline w-full m0-8  mb-6">
-          <p class="pr-4">
-            <time :datetime="post.datetime" class="capitalize text-white text-base">
+          <p v-if="post.date || date" class="pr-4">
+            <time :datetime="post.date" class="capitalize text-white text-base">
               {{ formattedPublishDate }}
             </time>
           </p>
 
-          <p class="text-white text-base pr-4">
+          <p v-if="post.readingTime || readingTime" class="text-white text-base pr-4">
             {{ post.readingTime }}
           </p>
 
           <p class="break mb-6 visible md:hidden"></p>
 
-          <section v-if="post.tags" class="width-screen">
-            <NuxtLink
-              v-for="tag in post.tags"
-              :key="tag"
-              :to="`/tag/${tag}/`"
-              class="text-white hover:bg-pink-400 hover:bg-white hover:text-white hover:border-white border-2 border-white-400 font-sans font-bold text-xs sm:text-sm px-4 py-2 mr-4 mb-2 rounded-full transition-color transition-bg"
-            >
-              <svg class="inline w-3 fill-current align-middle mr-1" viewBox="0 0 20 20" role="img" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0 10V2l2-2h8l10 10-10 10L0 10zm4.5-4a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
-              </svg>
-
-              {{ tag }}
-            </NuxtLink>
-          </section>
+          <TagList v-if="post.tags || tags" :tags="post.tags" />
 
         </div>
 
@@ -82,13 +69,31 @@
 </template>
 
 <script>
-// import Parallax from "vue-parallaxy"
+// import Parallax from "vue-parallaxy" // for cover images
+import TagList from '@/components/TagList'
 
 export default {
-  // TODO: Yeah, this isn't exactly ideal re: type safety
-  props: ['post'],
+  props: {
+    post: {
+      type: Object,
+      default: {
+        title: "",
+        description: "",
+        date: undefined,
+        readingTime: "",
+        tags: [],
+        cover: ""
+      }
+    },
+    title: String,
+    description: String,
+    date: Date,
+    readingTime: String,
+    tags: Array,
+    cover: String
+  },
 
-  components: { },
+  components: { TagList },
 
   methods: {
     titleCase(str = "") {

@@ -11,18 +11,14 @@
           </h2>
         </div>
 
-        <ul class="home-nav">
+        <ul class="home-nav max-w-xl">
           <li><NuxtLink to="/" class="nav-link">Home</NuxtLink></li>
 
           <li><NuxtLink to="/about" class="nav-link">About</NuxtLink></li>
 
           <li class="sm:visible lg:hidden break"></li>
 
-          <li><NuxtLink to="/work" class="nav-link">Work</NuxtLink></li>
-
           <li><NuxtLink to="/writing" class="nav-link">Writing</NuxtLink></li>
-
-          <li class="sm:visible lg:hidden break"></li>
 
           <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>

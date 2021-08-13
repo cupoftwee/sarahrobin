@@ -9,4 +9,6 @@ cover: '/images/posts/git-basics-iii.png'
 url: 'https://alligator.io/workflow/git-branching-basics/'
 ---
 
-I'm always happy to write for [Alligator.io](https://alligator.io), and they're having me continue my series on [git basics](https://alligator.io/workflow/) with Git Basics III: Braving Branch Management
+I'm always happy to write for [Alligator.io](https://alligator.io), and they're having me continue my series on git basicswith <a href="https://alligator.io/workflow/git-branching-basics/" target="__blank"> Git Basics III: Braving Branch Management</a>
+
+![A screenshot of the third article in the git basics series on Alligator.io](/images/posts/git-basics-iii.png)

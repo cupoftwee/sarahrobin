@@ -82,8 +82,9 @@ export default {
       .fetch()
 
     const projects = await $content('work')
-      .sortBy('createdAt', 'asc')
+      .sortBy({ year: 1})
       .fetch()
+    console.log('projects', projects)
 
     return { articles, projects }
   }

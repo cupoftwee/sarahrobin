@@ -82,11 +82,11 @@ export default {
       .fetch()
 
     const projects = await $content('work')
-      .sortBy({ year: 1})
+      .limit(5)
       .fetch()
-    console.log('projects', projects)
+    const sortedProjects = projects.sort((a, b) => b.year - a.year)
 
-    return { articles, projects }
+    return { articles, projects: sortedProjects }
   }
 }
 </script>

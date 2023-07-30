@@ -37,7 +37,7 @@
 
   }
 </script>
-<style>
+<style lang="postcss">
   .content-card {
     .card-cover {
       padding: 1rem;

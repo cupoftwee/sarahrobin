@@ -80,7 +80,7 @@
   }
 </script>
 
-<style>
+<style lang="postcss">
   .bio-details img {
     border-radius: 100px;
     border: 6px solid gainsboro;

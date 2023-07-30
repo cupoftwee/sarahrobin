@@ -90,7 +90,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="postcss">
   .page-home {
     width: 100%;
     height: 100%;

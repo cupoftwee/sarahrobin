@@ -66,7 +66,7 @@ export default {
   }
 }
 </script>
-<style>
+<style lang="postcss">
   .articles {
     @apply grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 grid-flow-row auto-rows-max gap-4;
 

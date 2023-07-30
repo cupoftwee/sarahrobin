@@ -73,7 +73,7 @@ export default {
 }
 </script>
 
- <style>
+ <style lang="postcss">
     .footer-menu {
       overflow-x: hidden;
       @apply flex flex-wrap justify-around;

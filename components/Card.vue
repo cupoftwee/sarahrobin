@@ -45,7 +45,7 @@
   //       </li>
   //     </ul>
 </script>
-<style>
+<style lang="postcss">
 .card {
   @apply flex flex-col;
 

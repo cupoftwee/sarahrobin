@@ -1,13 +1,5 @@
 <template>
   <li class="content-card">
-    <a :href="content.url">
-      <img
-        class="card-cover"
-        :src="content.image"
-        :alt="`${content.name}'s homepage`"
-      />
-    </a>
-
     <div class="bg-white py-3 rounded-b-lg">
       <a :href="content.url">
         <h3 class="font-bold text-4xl link-pretty">
@@ -22,6 +14,13 @@
       </p>
     </div>
 
+    <a :href="content.url">
+      <img
+        class="card-cover"
+        :src="content.image"
+        :alt="`${content.name}'s homepage`"
+      />
+    </a>
 
     <div class="rainbow-rule rainbow-break"></div>
   </li>

@@ -3,27 +3,35 @@
     <PostHeader :post="writingHeader" />
 
     <div
-      class="post-content width-screen bg-white mx-auto px-6 sm:px-12 pt-12"
-      :class="'border-b border-grey-lighter pb mb-16'"
+      class="post-content width-screen bg-white mx-auto px-0 md:px-6 pt-6 md:pt-12 border-b border-grey-lighter pb mb-16"
     >
-      <div class="mx-auto px-8 max-w-6xl pb-6">
+      <div class="mx-auto px-3 md:px-8 max-w-6xl pb-6">
         <ul class="articles">
           <li
             class="article"
-            v-for="article of articles"
-            :key="article.slug"
+            v-for="(article, i) of articles"
+            :key="`${article.slug}-${i}`"
           >
             <NuxtLink :to="{ name: 'blog-slug', params: { slug: article.slug } }">
-              <h4 class="link-pretty px-4 py-2 leading-tight">{{ article.title }}</h4>
+              <h4 class="link-pretty px-4 py-2 leading-tight">
+                {{ article.title }}
+              </h4>
 
-              <img class="object-cover" :src="article.cover" />
+              <nuxt-img 
+                class="object-cover" 
+                :src="article.cover"
+                sizes="sm:100vw md:400px"
+                densities="x1 x2"
+                format="webp"
+                loading="lazy" 
+              />
 
               <div class="article-info px-4 py-2">
                 <p class="text-sm text-gray-600">{{ article.teaser }}</p>
               </div>
-
-              <TagList class="p-4" :tags="article.tags" dark />
             </NuxtLink>
+
+            <TagList class="px-4 py-2" :tags="article.tags" />
           </li>
         </ul>
 

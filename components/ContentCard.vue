@@ -1,5 +1,5 @@
 <template>
-  <li class="content-card">
+  <div class="content-card">
     <div class="bg-white py-3 rounded-b-lg">
       <a :href="content.url">
         <h3 class="font-bold text-4xl link-pretty">
@@ -15,15 +15,19 @@
     </div>
 
     <a :href="content.url">
-      <img
+      <nuxt-img
         class="card-cover"
         :src="content.image"
         :alt="`${content.name}'s homepage`"
+        sizes="sm:100vw md:675px lg:800px"
+        densities="x1 x2"
+        format="webp"
+        loading="lazy"
       />
     </a>
 
     <div class="rainbow-rule rainbow-break"></div>
-  </li>
+  </div>
 </template>
 
 <script>

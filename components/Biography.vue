@@ -20,16 +20,13 @@
           </NuxtLink>
         </div>
 
-
-
         <p v-if="!teaser" class="font-light text-md xl:text-lg px-4 mt-10">
           <span class="font-bold">For development</span>,
           I usually work w/ a varied Javascript stack for rapid prototyping
           and larger, full-stack projects. I also tinker in Phoenix, Ruby,
           and I'm learning Rust. <br />
-          You can find my code <a href="http://github.com/cupoftwee" target="_blank" class="font-bold text-md lg:text-lg  link-pretty">
+          You can find my code <a href="http://github.com/cupoftwee" target="_blank" class="font-bold text-md lg:text-lg nav-link link-pretty">
           on Github &#8594;</a>
-          </a>
         </p>
 
         <p v-if="!teaser" class="font-light text-md lg:text-lg mt-10 px-4">
@@ -46,29 +43,35 @@
       <hr v-if="!teaser" class="rainbow-rule rainbow-break" />
 
       <div v-if="!teaser" class="bio-details flex flex-col-reverse md:flex-row">
-        <div class="bio-photo max-w-lg lg:max-w-xl pr-6 xl:pr-12 ">
-          <br />
-          <img class="rounded-max" src="/images/author/profile-08-2021.jpg" />
+        <div class="bio-photo flex flex-col justify-center mr-6 mt-6">
+          <nuxt-img 
+            class="rounded-max" 
+            src="/images/author/profile-08-2021.jpg" 
+            alt="A portrait of Sarah Robin wearing a floral facemask and thick eyeglasses with her brown hair tied back in a ponytail, taken in front of a transgender pride flag"
+            sizes="sm:100vw md:400px lg:400px xl:400px"
+            densities="x1 x2"
+            format="webp"
+            loading="lazy" 
+          />
 
-          <p class="bio-pronouns">(She/They)</p>
+          <p class="bio-pronouns">(she/they)</p>
         </div>
 
-        <div class="bio-personal font-light ">
+        <div class="bio-personal font-light">
           <h3 class="text-center mb-2">Personal Life</h3>
+
           <p>
             Outside of work, I spend my time making art (ranging from model kits to watercolors to generative css experiments), cooking up a storm, and being entirely too finicky about tea. As well, I'm a devoted gardener and loving plant mom - I will send pictures of my garden if provoked!
           </p>
+
           <p>
-            I also enjoy hiking, I'm learning to climb, and I enjoy a veritable bevvy of nerdy pasttimes. Feel free to ask me about them, if you would like an improvised essay on the spot!
+            I also enjoy hiking, I'm learning to climb, and I enjoy a veritable bevvy of nerdy pasttimes. Feel free to ask me about them, as I will happily infodump about any of my interests!
           </p>
         </div>
       </div>
-
-
     </div>
   </section>
 </template>
-
 <script>
   export default {
     props: {
@@ -79,17 +82,17 @@
     }
   }
 </script>
-
 <style lang="postcss">
   .bio-details img {
-    border-radius: 100px;
+    border-radius: 1000px;
     border: 6px solid gainsboro;
-    margin: 12px;
+    min-width: 250px;
   }
   .bio-intro {
     text-shadow: 2px 2px 3px rgba(255,255,255,0.1);
   }
   .bio-pronouns {
+    margin-top: 12px;
     text-align: center;
     font-weight: bold;
   }

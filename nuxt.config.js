@@ -11,7 +11,7 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      { hid: 'description', name: 'description', content: 'Sarah Robin | Sarah is an experienced full-stack web developer who combines a passion for technology, art, and accessibility together to bring a people-centered, fault-tolerant approach to building systems.' },
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
@@ -51,6 +51,7 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     '@nuxt/content',
+    '@nuxt/image',
     ['@nuxtjs/sitemap', {
       hostname: 'http://sarahrobin.dev/'
     }]

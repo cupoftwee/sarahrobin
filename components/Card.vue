@@ -1,13 +1,17 @@
 <template>
   <li class="card">
-    <img
+    <nuxt-img
       class="card-cover"
       :src="post.cover"
       :alt="post.title"
+      sizes="sm:100vw md:350px"
+      densities="x1 x2"
+      format="webp"
+      loading="lazy"
     />
 
     <div class="card-details">
-      <h4 class="link-pretty font-bold text-xl mb-2 truncate ...">
+      <h4 class="link-pretty font-bold text-xl mb-2 truncate">
         <NuxtLink :to="`/blog/${post.slug}/`" class="">
           {{ post.title }}
         </NuxtLink>
@@ -38,21 +42,15 @@
 
     components: { TagList }
   }
-
-  // <ul v-if="post.tags" class="card-tag-grid">
-  //       <li v-for="(tag, i) in post.tags" :key="`${tag}-${i}`" class="card-tag">
-  //         #{{ tag }}
-  //       </li>
-  //     </ul>
 </script>
-<style>
+<style lang="postcss">
 .card {
   @apply flex flex-col;
 
   .card-cover {
     height: 11rem;
     min-width: 100%;
-    @apply w-full object-cover rounded-t-lg bg-gray-300 object-cover;
+    @apply w-full rounded-t-lg bg-gray-300 object-cover;
   }
 
   .card-details {

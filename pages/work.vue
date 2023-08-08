@@ -39,7 +39,7 @@
     }
   }
 </script>
-<style>
+<style lang="postcss">
   .work-list {
     @apply mt-8;
   }

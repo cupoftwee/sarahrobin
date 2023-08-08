@@ -69,12 +69,13 @@
 
     <div class="bg-gradient border-t-glass w-full pt-12 pb-6">
       <ul class="flex justify-center align-center mt-12">
-        <li class="px-2 mb-2">
+        <!-- TBD - Fix issue w/ generation once I blog enough to warrant an RSS feed -->
+        <!-- <li class="px-2 mb-2">
           <a href="/feed.xml" class="hover:text-pink-200 text-white">
             <fa-icon icon="rss" class="hover:no-underliner" />
             RSS feed
           </a>
-        </li>
+        </li> -->
 
         <li class="px-2 mb-2">
           <a href="/sitemap.xml" class="hover:text-pink-200 nav-link text-white">
@@ -85,7 +86,7 @@
       </ul>
 
       <p class="text-white text-base text-center w-full mx-auto">
-        &copy; Sarah Robin 2019
+        &copy; Sarah Robin 2019 - 2023
       </p>
     </div>
   </div>

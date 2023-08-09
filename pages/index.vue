@@ -34,7 +34,7 @@
       >
        <div class="mx-auto max-w-3xl xl:max-w-4xl px-8 md:px-12">
         <h1 class="text-6xl">My Work</h1>
-        <p>A few choice cuts from my various professional endeavors</p>
+        <p>A few choice cuts from my professional endeavors</p>
 
         <div class="rainbow-rule" style="margin-bottom: 4rem;"></div>
 
@@ -82,15 +82,16 @@ export default {
       .fetch()
 
     const projects = await $content('work')
-      .sortBy('createdAt', 'asc')
+      .limit(10)
       .fetch()
+    const sortedProjects = projects.sort((a, b) => b.year - a.year).slice(0, 5)
 
-    return { articles, projects }
+    return { articles, projects: sortedProjects }
   }
 }
 </script>
 
-<style>
+<style lang="postcss">
   .page-home {
     width: 100%;
     height: 100%;

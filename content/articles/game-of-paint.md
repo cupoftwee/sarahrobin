@@ -6,7 +6,7 @@ slug: "game-of-paint"
 date: 2019-05-10 17:54:43
 author: 'Sarah Robin'
 tags: ['generative', 'canvas', 'portfolio']
-cover: "https://cdn.dribbble.com/users/139639/screenshots/6405695/screen_shot_2019-04-28_at_1.51.22_am.png"
+cover: '/images/posts/game-of-paint-may-flowers.jpg'
 ---
 
 Do you know what twitter is amazing at? Other than not banning nazis and reveling in the nadir of human interactions, I mean. Twitter is amazing at bots and art. This isn't really something twitter intended, as far as I can tell, but if you use twitter to follow artists and generative art bots, the experience is surprisingly good.

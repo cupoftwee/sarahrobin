@@ -37,7 +37,7 @@
   }
 </script>
 
-<style>
+<style lang="postcss">
   .author-info {
     @apply flex flex-col-reverse;
     @apply mx-auto  max-w-xl px-6 pt-24 pb-10;

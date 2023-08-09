@@ -25,15 +25,6 @@
           </li>
 
           <li class="break mb-6 visible md:hidden"></li>
-<!--
-          <li class="pl-2 mb-0">
-            <NuxtLink to="/work" class="footer-link nav-link link-pretty hover:text-purple-400">
-              <fa-icon icon="feather" />
-              Work
-            </NuxtLink>
-          </li>
-
-          <li class="break mb-6 visible md:hidden"></li> -->
 
           <li class="pl-2 mb-0">
             <NuxtLink to="/writing" class="footer-link nav-link link-pretty hover:text-purple-400">
@@ -66,19 +57,17 @@
 </template>
 
 <script>
-import { faGithub } from '@fortawesome/free-brands-svg-icons'
-
 export default {
   name: 'Footer',
 }
 </script>
 
- <style>
+ <style lang="postcss">
     .footer-menu {
       overflow-x: hidden;
       @apply flex flex-wrap justify-around;
       @apply text-sm leading-normal;
-      @apply w-screen py-8 py-8;
+      @apply w-screen py-8;
 
       .footer-logo {
         font-weight:400;
@@ -106,10 +95,4 @@ export default {
         }
       }
     }
-
-  .nav-link.link-pretty {
-
-  }
-
-
  </style>

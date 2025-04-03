@@ -2,9 +2,9 @@
   <div class="content-card">
     <div class="bg-white py-3 rounded-b-lg">
       <a :href="content.url">
-        <h3 class="font-bold text-4xl link-pretty">
-            {{ content.name }}
-        </h3>
+        <p class="font-bold text-4xl link-pretty">
+          {{ content.name }}
+        </p>
       </a>
 
       <hr class="mb-2" />
@@ -18,7 +18,7 @@
       <nuxt-img
         class="card-cover"
         :src="content.image"
-        :alt="content.description"
+        :alt="content.alt"
         sizes="sm:100vw md:675px lg:800px"
         densities="x1 x2"
         format="webp"

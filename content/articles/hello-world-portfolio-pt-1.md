@@ -7,7 +7,7 @@ date: 2019-07-29 17:54:43
 author: 'Sarah Robin'
 tags: ['personal']
 cover: /images/posts/sailing-with-samantha-2019.webp
-coverAlt: "A photo of me sailing with my fiance, Hex, on Richardson's Bay in early 2019"
+alt: "A photo of me sailing with my fiance, Hex, on Richardson's Bay in early 2019"
 ---
 
 

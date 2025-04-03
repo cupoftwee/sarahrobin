@@ -20,7 +20,7 @@
               <nuxt-img 
                 class="object-cover" 
                 :src="article.cover"
-                :alt="article.coverAlt"
+                :alt="article.alt"
                 sizes="sm:100vw md:400px"
                 densities="x1 x2"
                 format="webp"
@@ -60,7 +60,7 @@ export default {
   },
   async asyncData({ $content, params: { slug } }) {
     const articles = await $content('articles')
-      .only(['title', 'teaser', 'date', 'cover', 'slug', 'author', 'tags'])
+      .only(['title', 'teaser', 'date', 'cover', 'alt', 'slug', 'author', 'tags'])
       .sortBy('createdAt', 'asc')
       .fetch()
 

@@ -6,6 +6,7 @@ date: 2018-07-03 17:54:43
 author: 'Sarah Robin'
 tags: ['portfolio', 'git', 'tutorial']
 cover: '/images/posts/git-basics-iii.png'
+alt: "A screenshot of the third article in the git basics series on Alligator.io"
 url: 'https://alligator.io/workflow/git-branching-basics/'
 ---
 

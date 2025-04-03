@@ -12,7 +12,7 @@
         <ul>
           <li class="pb-10 text-lg leading-normal text-gray-700" v-for="article of articles" :key="article.slug">
             <NuxtLink :to="{ name: 'blog-slug', params: { slug: article.slug } }">
-              <img :src="article.cover" />
+            <img :src="article.cover" :alt="article.alt" />
               <div>
                 <h2>{{ article.title }}</h2>
                 <p>by {{ article.author }}</p>

@@ -6,6 +6,7 @@ date: 2018-06-28 17:54:43
 author: 'Sarah Robin'
 tags: ['portfolio', 'git', 'tutorial']
 cover: '/images/posts/git-basics-i.png'
+alt: "A screenshot of the first article in the git basics series on Alligator.io"
 url: 'https://alligator.io/workflow/git-devs-best-friend/'
 ---
 

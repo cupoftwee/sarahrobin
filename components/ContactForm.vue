@@ -10,8 +10,8 @@
 
       <div class="md:flex md:items-center mb-6">
         <div class="md:w-1/3">
-          <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="full-name">
-            Full Name
+          <label class="block text-gray-700 font-bold md:text-right mb-1 md:mb-0 pr-4" for="full-name">
+            Full Name <span class="text-red-700 pl-1">*</span>
           </label>
         </div>
 
@@ -26,8 +26,8 @@
 
       <div class="md:flex md:items-center mb-6">
         <div class="md:w-1/3">
-          <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="username">
-            Email
+          <label class="block text-gray-700 font-bold md:text-right mb-1 md:mb-0 pr-4" for="username">
+            Email <span class="text-red-700 pl-1">*</span>
           </label>
         </div>
 
@@ -42,8 +42,8 @@
 
       <div class="md:flex md:items-center mb-6">
         <div class="md:w-1/3">
-          <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="message">
-            Message
+          <label class="block text-gray-700 font-bold md:text-right mb-1 md:mb-0 pr-4" for="message">
+            Message <span class="text-red-700 pl-1">*</span>
           </label>
         </div>
 
@@ -78,14 +78,14 @@
         </li> -->
 
         <li class="px-2 mb-2">
-          <a href="/sitemap.xml" class="hover:text-pink-200 nav-link text-white">
+          <a href="/sitemap.xml" class="hover:text-pink-200 nav-link  text-lg text-white font-bold shadow">
             <fa-icon icon="sitemap" class="hover:no-underline" />
             Site map
           </a>
         </li>
       </ul>
 
-      <p class="text-white text-base text-center w-full mx-auto">
+      <p class="text-white font-bold text-lg text-center w-full mx-auto shadow">
         &copy; Sarah Robin 2019 - 2023
       </p>
     </div>

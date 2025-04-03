@@ -7,6 +7,7 @@ date: 2019-07-29 17:54:43
 author: 'Sarah Robin'
 tags: ['personal']
 cover: /images/posts/sailing-with-samantha-2019.webp
+alt: "A photo of me sailing with my fiance, Hex, on Richardson's Bay in early 2019"
 ---
 
 
@@ -19,7 +20,7 @@ I worked that whole holiday, keeping my sketchbook on me just in case I found a 
 
 All that effort got me relatively little: I found a pretty 70s nostalgic serif typeface, made a few solid sketches of a custom letter forms for a logotype, and used dozens of pages for my brain to furiously run in circles. No matter how much of myself I put in, or how capable I thought I was, I couldn't seem to apply that capability for myself. 
 
-![Sketches of custom lettering](/images/posts/letterform-sketch.jpg)
+![Sketches of custom lettering](/images/posts/letterform-sketch.jpg "The original custom letterform sketch of the first letter of my last name, 'B', from 2013. It's a 70s nostalgic serif letterform.")
 *The original custom letterform sketch from 2013*
 
 It wasn't that I was remarkably better than anybody else, nor did I aspire to live as a tortured auteur. I only mean to say that I had capability, and I could push myself to get a lot done with it, just never for myself. 
@@ -38,7 +39,7 @@ we were told, as 2014 limped into the snowmapocayplsageddon of 2015. The startup
 I mean, I couldn't use my portfolio; it was over a year old with no improvements, the contact form didn't even work.
 
 
-![Seaport District in winter - purple holiday lights twinkling like stars below the underpass](/images/posts/seaport-in-winter-cropped.jpg)
+![Seaport District in winter - purple holiday lights twinkling like stars below the underpass](/images/posts/seaport-in-winter-cropped.jpg "Boston's Seaport District, in winter, with purple holiday lights twinkling like stars below the underpass")
 *Boston's Seaport District, in winter*
 
 I had half of an idea for a redesign the year before (see above), just never chance to follow up on it. I had been bouncing from startup to startup, nothing sticking. There were several attempts of a new portfolio scattered across my hard drive, each a momento for a promising idea scuttled onto the craggy shores of executive dysfuction and dissociation.
@@ -58,7 +59,7 @@ We're celebrating new year's eve, or at least trying to. Its been a hell of a fe
 
 By the end of the year, I was burned out, badly. Too many months of six day workweeks. I buried my dog. There were the elections. We got robbed.
 
-![The broken lock to our home](/images/posts/durham-trust-broken.jpg)
+![The broken lock to our home](/images/posts/durham-trust-broken.jpg "The broken lock to our home, after the robbery in Durham, NC")
 *The first new friend I made in Durham was the one who robbed us. Trust issues suck.*
 
 Durham was a crucible that burned away the last vestiges of the lies I told myself. In that terrifying chaos that I realized I was trans, I had always been. I knew almost nobody in NC, hadn't had a doctor in years, and my health was rapidly deteriorating. I realized I needed to get out of North Carolina, ASAP. I had some friends and family in CA. I could get medical care there. Medocino & Sonoma were a lot cheaper than most of the Bay area, too.
@@ -86,7 +87,7 @@ Its not all roses - I've managed to survive the hazards of transition so far, th
 
 In return, I have everything I never knew I wanted, and more. 
 
-![sailing on the bay with my love](/images/posts/sailing-with-samantha-2019.jpg)
+![sailing on the bay with my love](/images/posts/sailing-with-samantha-2019.jpg "My fiance and I sailing on Richardson's Bay in early 2019")
 *My fiance and I sailing on Richardson's Bay in early 2019*
 
 Joy so raw and honest I still tear up when thinking about it. Acceptance, healing, love so wild and deep that I dove in head-first and have yet to find the bottom. I have discovered depths to my strength and kindness I never knew was possible. Euphoria is the correct term, but it is the understatement of a lifetime. 
@@ -95,7 +96,7 @@ For the first time in years, I felt myself get better at programming instead of 
 
 So I started building. And writing. And now, here I am. This blog isn't 100% what I want it to be... yet. But it'll get there, slow & steady, with lots of love. 
 
-So, how do you make a portfolio to grow your career when you have crippling face and identity dysphoria? Answer: Half a decade of painful experience and growth, and around a week of actually coding. 
+So, how do you make a portfolio to grow your career when you have crippling dysphoria? Answer: Half a decade of painful experience and growth, and around a week of actually coding. 
 
 <code>&nbsp;</code>
 ---

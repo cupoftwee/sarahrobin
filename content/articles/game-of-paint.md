@@ -7,6 +7,7 @@ date: 2019-05-10 17:54:43
 author: 'Sarah Robin'
 tags: ['generative', 'canvas', 'portfolio']
 cover: '/images/posts/game-of-paint-may-flowers.jpg'
+alt: "A green, pink, and white colorized image of Conway's Game of Life that resembles a bouquet of pink may flowers on a lush green background"
 ---
 
 Do you know what twitter is amazing at? Other than not banning nazis and reveling in the nadir of human interactions, I mean. Twitter is amazing at bots and art. This isn't really something twitter intended, as far as I can tell, but if you use twitter to follow artists and generative art bots, the experience is surprisingly good.
@@ -15,7 +16,7 @@ While these days, I'm more on Mastodon than anything else, I still have one proj
 
 Conway's Game of Life is quite cool, but not exactly new. Since its inception, its been implemented in almost every way conceivable. There's [even a community](http://www.conwaylife.com/) that is focused soley around discovering new ways to play the game, new patterns that make more life. 
 
-![Animated example of Gosper's Glider Gun](/images/posts/gospers-glider-gun.gif)
+![Animated example of Gosper's Glider Gun](/images/posts/gospers-glider-gun.gif "Gosper's Glider Gun, a self-sustaining pattern")
 *[Gosper's Glider Gun](http://www.conwaylife.com/wiki/Gosper_glider_gun), a self-sustaining pattern*
 
 Maybe it's just me, but watching all those little automata do their thing is so satisfying. They're kinda cute, really. The problem is that they almost always get stuck in the same pattern (like above) or die out quickly. And here's what Vexorian, the creator of Cloudy Conway, got stunningly right: Being able to see the history of the simulated life alongside the life, produces some incredible results. They [lay it out in their blog](http://www.vexorian.com/2015/05/cloudy-conway.html)) fairly straightforwardly: 
@@ -27,22 +28,22 @@ Naturally, I chose the *strangest* way to render this. Canvas? Been done. No, wh
 
 Weirdly, not much!
 
-![Game of Life pixel art, black and white](/images/posts/game-of-paint-mono.jpg)
+![Game of Life pixel art, black and white](/images/posts/game-of-paint-mono.jpg "Game of Life pixel art, black and white")
 *tbh this one scares me. I feel like something's going to crawl out*
 
 Once I could reliably create the black and white versions, I knew the fun part was here: COLOR! I went to my favorite library, <span class="nav-link">[Chroma.js](https://vis4.net/chromajs/)</span>, to start creating palettes. I leaned on the <span class="nav-link">[color brewer](https://colorbrewer2.org)</span> as a starting point, then went wild experimenting. 
 
-![Game of Life pixel art, pink purple small](/images/posts/game-of-paint-pink-purple-small.jpg)
+![Game of Life pixel art, pink purple small](/images/posts/game-of-paint-pink-purple-small.jpg "Game of Life pixel art, each automaton differing shades of pinks and purples")
 *Some of them kinda came out... cute?*
 
-![Game of Life pixel art, wintry mix](/images/posts/game-of-paint-wintry-mix.jpg)
+![Game of Life pixel art, wintry mix](/images/posts/game-of-paint-wintry-mix.jpg "Game of Life pixel art, white with ice blue accents, looking like a new england road in a blizzard")
 *The dreaded bane of new england roads: Wintry Mix*
 
 There's nothing quite so much fun as dipping your pixel creatures in paint and watching them scurry about the canvas, living their little lives, doing their little thing. And at the end, you are left with an incredibly piece of art that you both made, and didn't make. So... what does one do?
 
 You make [a bouquet of flowers for Mother's Day](https://dribbble.com/shots/6461360-Conway-s-Game-of-Paint-May-Flowers)!
 
-![Game of Life pixel art, mother's day flowers](/images/posts/game-of-paint-may-flowers.jpg)
+![Game of Life pixel art, mother's day flowers](/images/posts/game-of-paint-may-flowers.jpg "Game of Life pixel art, mother's day flowers, a bouquet of pink and purple flowers on a lush green background")
 *Thanks for the love &amp; support, Mom <3*
 
 Okay, so, realistically this isn't exactly a stunning new innovation; box-shadow vs canvas is no argument. Go with canvas, unquestionably. But if you ever want to freeze your browser and have some fun dipping pixels in paint, please feel free to <span class="nav-link">[play around with my code](https://glitch.com/~conways-game-of-paint)</span>, fork it, and make it your own. 

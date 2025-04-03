@@ -18,7 +18,7 @@
       <nuxt-img
         class="card-cover"
         :src="content.image"
-        :alt="`${content.name}'s homepage`"
+        :alt="content.description"
         sizes="sm:100vw md:675px lg:800px"
         densities="x1 x2"
         format="webp"

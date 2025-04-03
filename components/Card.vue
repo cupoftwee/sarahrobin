@@ -3,7 +3,7 @@
     <nuxt-img
       class="card-cover"
       :src="post.cover"
-      :alt="post.title"
+      :alt="post.coverAlt"
       sizes="sm:100vw md:350px"
       densities="x1 x2"
       format="webp"

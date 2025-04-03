@@ -6,6 +6,7 @@ date: 2018-07-03 17:54:43
 author: 'Sarah Robin'
 tags: ['portfolio', 'git', 'tutorial']
 cover: '/images/posts/git-basics-ii.png'
+coverAlt: "A screenshot of the second article in the git basics series on Alligator.io"
 url: 'https://alligator.io/workflow/git-commit-and-collab/'
 ---
 

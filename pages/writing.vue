@@ -20,6 +20,7 @@
               <nuxt-img 
                 class="object-cover" 
                 :src="article.cover"
+                :alt="article.coverAlt"
                 sizes="sm:100vw md:400px"
                 densities="x1 x2"
                 format="webp"
